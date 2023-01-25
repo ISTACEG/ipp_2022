@@ -1,0 +1,26 @@
+@import "../UTILS/color.scss";
+@import "../UTILS/function.scss";
+
+
+
+
+
+
+div.Event-Card-List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    padding-top: pxe(48);
+    position: relative;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(pxe(41.5127));
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: pxe(18.1618);
+
+    z-index: 1;
+
+
+
+
+}

@@ -1,0 +1,260 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+
+
+div.event-detail {
+    display: block;
+    z-index: 5;
+    margin: pxe(142) 0;
+
+
+
+    div.wrapper {
+        display: flex;
+        justify-content: space-evenly;
+
+
+        div.container-1 {
+            display: flex;
+            flex-direction: column;
+
+
+            div.text-info {
+                color: $white;
+                width: pxe(500);
+        
+                h1.eventName {
+                    font-size: pxe(48);
+                    font-weight: 700;
+                }
+        
+        
+                p.eventDescription {
+                    font-size: pxe(16);
+                    font-weight: 400;
+                    text-align: start;
+                    margin-top: pxe(16);
+                }
+        
+        
+            }
+
+            
+            div.event-info-bg {
+                margin-top: pxe(48);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+        
+                width: pxe(450);
+        
+                background: rgba(255, 255, 255, 0.18);
+                backdrop-filter: blur(pxe(41.5127));
+        
+                border-radius: pxe(18.1618);
+                padding: pxe(10);
+                position: relative;
+                overflow: hidden;
+
+
+        
+                div.event-info-item {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    padding-bottom: pxe(8);
+                    border-bottom: pxe(2) solid $white;
+                    margin: pxe(14) 0;
+        
+                    span {
+                        font-size: pxe(16);
+                        font-weight: 400;
+                        color: $white;
+                    }
+        
+                    span.h-span {
+                        font-weight: 700;
+                    }
+                }
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    bottom: 0;
+                    right: 0;
+                    border-radius: pxe(18.16);
+                    background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                    display: block;
+                    height: 200%;
+                    width: pxe(100);
+            
+            
+            
+                    animation-name: register-glowbg;
+                    animation-duration: 6s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+            
+                }
+            }
+        
+        }
+    
+        
+    
+    
+    
+        div.container-2 {
+            display: flex;
+            flex-direction: column;
+    
+
+
+            div.img-bg {
+                display: block;
+                height: max-content;
+                width: max-content;
+                position: relative;
+
+
+
+                img.eventposter {
+                    height: pxe(300);
+                    width: pxe(500);
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: pxe(18.16);
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: pxe(18.16);
+                    padding: pxe(2.4);
+                    background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+            
+                    animation-name: register-border-color;
+                    animation-duration: 5s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+            
+                    -webkit-mask: 
+                      linear-gradient(#fff 0 0) content-box, 
+                      linear-gradient(#fff 0 0);
+                    mask: 
+                      linear-gradient(#fff 0 0) content-box, 
+                      linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: destination-out;
+                    mask-composite: exclude;
+                    pointer-events: none;
+                }
+            }
+            
+        
+            
+        
+            div.event-contact {
+                margin-top: pxe(48);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                
+                h2 {
+                    font-size: pxe(32);
+                    font-weight: 400;
+                    color: $white;
+                }
+
+                div.organizer-info-bg {
+                    margin-top: pxe(16);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+            
+                    width: pxe(450);
+            
+                    background: rgba(255, 255, 255, 0.18);
+                    backdrop-filter: blur(pxe(41.5127));
+            
+                    border-radius: pxe(18.1618);
+                    padding: pxe(10);
+
+                    overflow: hidden;
+
+
+                    
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -50%;
+                        bottom: 0;
+                        right: 0;
+                        border-radius: pxe(18.16);
+                        background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                        display: block;
+                        height: 200%;
+                        width: pxe(100);
+                
+                
+                
+                        animation-name: register-glowbg;
+                        animation-duration: 6s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                
+                    }
+            
+                    div.organizer-info-item {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        padding-bottom: pxe(8);
+                        border-bottom: pxe(2) solid $white;
+                        margin: pxe(14) 0;
+            
+                        span {
+                            font-size: pxe(16);
+                            font-weight: 400;
+                            color: $white;
+                        }
+            
+                        span.h-span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+            }
+
+            
+        }
+    
+    }
+
+    
+    
+
+
+
+
+
+
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navbar from './components/navbar';
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/home-page';
+import EventList from './pages/event-list';
+import Footer from './components/footer';
+import {useEffect, useState} from 'react'
+import EventInfo from './pages/event-info'
+import NoPage from './pages/no-page';
+import About from './components/about';
+import Register from './pages/register';
+
+
 
 function App() {
+
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='events' element={<EventList />}/>
+          <Route path='register' element={<Register />} />
+          <Route path='details' element={<EventInfo />} />
+          <Route path='*' element={<NoPage />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 

@@ -1,0 +1,96 @@
+@import '../UTILS/function.scss';
+@import '../UTILS/color.scss';
+
+
+
+
+
+div.sponsorCaraousal-container {
+    display: block;
+    width: pxe(1173);
+    overflow: hidden;
+
+
+    div.container {
+        overflow: hidden;
+        min-width: 100%;
+        animation-play-state: running;
+        position: relative;   
+    }
+
+    div.LeftEndDiv {
+        display: flex;
+        height: 100%;
+        width: pxe(150);
+        z-index: 500;
+        background-image: linear-gradient(to right, $primary, $primary, transparent);
+        position: 'absolute';
+        left: 0;
+        top: 0;
+    }
+
+    div.RightEndDiv {
+        display: flex;
+        height: 100%;
+        width: pxe(150);
+        z-index: 500;
+        background-image: linear-gradient(to right, transparent, $primary, $primary);
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+
+
+
+
+    div.SponsorCarousel {
+        display: flex;
+        width: fit-content;
+        animation-play-state: inherit;
+
+
+        div.ImgList {
+            display: flex;
+            width: 100%;
+            column-gap: pxe(10);
+            padding-right: pxe(10);
+
+            animation-name: running-carousel;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
+            animation-play-state: inherit;
+
+
+            img.ImgListItem {
+                height: pxe(93);
+                min-width: pxe(226);
+                object-fit: cover;
+                object-position: center;
+                margin-right: pxe(36);
+            }
+        }
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@keyframes running-carousel {
+    0% {
+        transform: translateX(-100%);
+    }
+}

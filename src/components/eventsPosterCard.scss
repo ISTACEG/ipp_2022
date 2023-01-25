@@ -1,0 +1,81 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+
+
+div.eventsPosterCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: pxe(225.09);
+    width: pxe(210);
+    // width: max-content;
+    
+    background-color: $white;
+    border-radius: pxe(16.62);
+
+    span.header {
+        font-size: pxe(21.96);
+        font-weight: 700;
+        color: $black;
+
+        margin: 0 pxe(12);
+    }
+
+
+
+    img {
+        height: pxe(120.7800064086914);
+        width: pxe(190);
+        border-radius: pxe(10.0649995803833);
+        object-fit: cover;
+        object-position: center;        
+    }
+
+
+
+    div.hashtag {
+        align-self: flex-start;
+
+        margin: 0 pxe(16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: pxe(16);
+        height: pxe(34.77);
+        width: max-content;
+
+        background-color: $primary;
+        border-radius: pxe(1000);
+        font-size: pxe(16);
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

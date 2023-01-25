@@ -1,0 +1,196 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+
+
+div.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: pxe(760);
+    background-color: $primary;
+    position: relative;
+
+
+    div.sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: pxe(1519);
+        padding: pxe(114) pxe(130) pxe(114);
+
+    
+        [class $= -bg-circle] {
+            display: flex;
+            height: pxe(1293);
+            width: pxe(1293);
+            background-color: $secondary;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        div.a-bg-circle {
+            position: absolute;
+            right: pxe(-583);
+            top: pxe(-624);
+            z-index: 0;
+        }
+    
+        div.b-bg-circle {
+            position: absolute;
+            height: pxe(1000);
+            width: pxe(1000);
+            left: pxe(-614);
+            top: pxe(554);        
+            z-index: 0;
+        }
+
+
+
+        h1 {
+            font-size: pxe(48);
+            font-weight: 400;
+            color: $white;
+            margin-bottom: pxe(24);
+            z-index: 1;
+        }
+
+
+        div.register-form {
+            display: flex;
+            flex-direction: column;
+    
+            width: 100%;
+            
+            padding: pxe(64);
+
+            background: rgba($white, 0.15);
+            backdrop-filter: blur(pxe(41.5127));
+            
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: pxe(18.1618);
+
+            z-index: 15;
+
+
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+
+                [class ^= row-] {
+                    display: flex;
+                    justify-content: space-between;
+            
+
+                    div.input-div {
+                        display: flex;
+                        margin: pxe(20);
+                        width: 100%;
+                        position: relative;
+                        z-index: 5;
+
+
+                        input:focus + label , input:not(input:placeholder-shown) + label  {
+                            
+                            top: pxe(-10);
+
+                        }
+
+                        label {
+                            position: absolute;
+                            left: 0;
+                            top: pxe(10);
+                            color: rgba($white, 0.5);
+                            font-size: pxe(14);
+                            font-weight: 400;
+                            z-index: -1;
+                            
+                        }
+
+
+                        input{
+                            background: 0;
+                            outline: none;
+                            text-align: start;
+                            border-bottom: pxe(2) solid rgba($white, 0.3);
+                            
+                            box-sizing: border-box;
+                            z-index: 6;
+                            
+                            width: 100%;
+                            padding: pxe(10) 0;
+                        
+                            font-size: pxe(16);
+                            font-weight: 400;
+                            color: rgba($white, 0.8);
+    
+                            &::placeholder {
+                                color: rgba($white, 0);
+                                font-size: pxe(14);
+                                font-weight: 400;
+                            }
+
+
+                        }
+
+                        
+                    }
+
+                    input[type="submit"]{
+                        border: 0;
+                        border-radius: pxe(8);
+                        max-width: 100%;
+                        width: 100%;
+                        min-width: max-content;
+                        text-align: center;
+                        color: $white;
+                        cursor: pointer;
+                        transition: all 600ms ease-in-out;
+                        
+                        font-size: pxe(16);
+                        font-weight: 400;
+                        
+                        background-color: $success-green;
+                        margin: pxe(20);
+                        padding: pxe(10);
+                    }
+                    
+                    input[type="submit"]:hover{
+                        background-color: rgba($success-green, 0.8);
+                    }
+                    
+                }
+
+
+
+                
+            }
+
+
+            
+
+
+
+
+
+        }
+
+
+
+
+        
+    }
+
+}
+
+
+

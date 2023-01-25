@@ -1,0 +1,135 @@
+@import "../UTILS/color.scss";
+@import '../UTILS/function.scss';
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: $black;
+    padding: pxe(16);
+    height: pxe(339.2);
+
+
+    div.footer-div {
+        display: flex;
+        justify-content: space-evenly;
+
+        width: 100%;
+        height: max-content;
+        background-color: $black;
+        margin: pxe(16) 0;
+
+
+
+        div.social-div {
+            display: block;
+            // height: fit-content;
+            width: fit-content;
+
+
+            img.ista-logo {
+                display: block;
+                height: pxe(119);
+                width: pxe(263);
+                object-fit: cover;
+                object-position: center;
+            }
+
+
+            div.social-handles {
+                display: flex;
+                margin: pxe(16) 0 0;
+                width: 100%;
+                justify-content: space-between;
+
+                img {    
+                    display: block;
+                    height: pxe(32);
+                    width: pxe(32);
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                img.email-logo {
+                    display: block;
+                    height: pxe(32);
+                    width: pxe(45);
+                    object-fit: cover;
+                    object-position: center;
+
+                }
+            }
+
+        }
+
+
+        div.contact-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            // display: grid;
+            // grid-template-rows: repeat(3, pxe(60.8));
+            // align-items: center;
+            // justify-items: center;
+            // justify-content: center;
+
+            width: max-content;
+            color: $white;
+            height: pxe(182.4);
+
+            span.contact-title {
+                font-size: pxe(32);
+                font-weight: 400;
+            }
+
+
+            div.contact-person-div-row {
+                display: flex;
+
+
+                div.contact-person-div {
+                    margin: pxe(12) pxe(12) 0 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    span.position {
+                        display: flex;
+                        font-size: pxe(18);
+                    }
+    
+                    div {
+                        margin-top: pxe(4);
+                        display: flex;
+
+                        span {
+                            display: flex;
+                            font-size: pxe(16);
+                            margin: 0 pxe(16) 0 0;
+                        }
+                    }
+    
+                }
+            }
+            
+
+
+
+
+        }
+        
+    }
+
+
+
+    span.copyright {
+        margin: pxe(48) 0 pxe(24);
+        font-size: pxe(16);
+        color: $white;
+    }
+}

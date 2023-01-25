@@ -1,0 +1,48 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+div.event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary;
+    overflow-x: hidden;
+    min-height: pxe(760);
+
+
+    div.sections {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: pxe(1519);
+        padding: 0 pxe(130);
+        z-index: 1;
+
+
+        [class $= -bg-circle] {
+            display: flex;
+            height: pxe(1293);
+            width: pxe(1293);
+            background-color: $secondary;
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        
+        div.a-bg-circle {
+            right: pxe(-759);
+            top: pxe(-789);
+        }
+
+
+    }
+
+
+}

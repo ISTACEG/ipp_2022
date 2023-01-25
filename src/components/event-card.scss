@@ -1,0 +1,152 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+
+div.event-card {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    height: pxe(216);
+    width: pxe(832);
+    background-color: $white;
+    border-radius: pxe(18.16);
+    margin-bottom: pxe(42);
+    padding: 0 pxe(10);
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+
+
+
+
+    div.edge-1 {
+        display: block;
+        background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+        background-size: 200% 200%;
+
+        height: 75%;
+        width: pxe(16);
+        position: absolute;
+        right: 0;
+        border-radius: pxe(18.16) 0 0 pxe(18.16);
+
+
+        animation-name: event-card-edge-anime;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    div.edge-2 {
+        display: block;
+        background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+        background-size: 200% 200%;
+
+        height: 75%;
+        width: pxe(16);
+        position: absolute;
+        left: 0;
+        border-radius: 0 pxe(18.16) pxe(18.16) 0;
+
+
+        animation-name: event-card-edge-anime;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+
+    img {
+        display: block;
+        height: pxe(196);
+        width: pxe(196);
+        border-radius: pxe(18.16);
+    }
+
+    div.info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+
+        div.info-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60%;
+            width: 80%;
+            border-bottom: pxe(2.4) solid $black;
+            
+            img {
+                display: block;
+                height: pxe(24);
+                width: pxe(24);
+                object-fit: cover;
+                object-position: center;
+            }
+
+
+            span {
+                font-size: pxe(24);
+                font-weight: 400;
+            }
+
+            
+
+
+
+            span.info-item-name {
+                justify-self: start;
+            }
+
+        }
+
+
+        div.event-type {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+            width: 80%;
+            border-bottom: pxe(2.4) solid $black;
+
+
+            span {
+                font-size: pxe(24);
+                font-weight: 400;
+            }
+
+        }
+
+
+
+    }
+
+
+}
+
+
+
+@keyframes event-card-edge-anime {
+
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+    
+}

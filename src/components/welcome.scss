@@ -1,0 +1,85 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+div.welcome-div {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+
+    width: 100%;
+    min-height: pxe(760);
+    background-color: $primary;
+    padding: pxe(114) 0 0;
+
+
+
+    div.main-infor-container {
+        margin: 0 0 pxe(36);
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        width: 100%;
+
+        div.main-info {
+            display: block;
+            color: $white;
+            max-width: pxe(567);
+    
+            h1 {
+                font-size: pxe(48);
+                font-weight: 400;
+                text-align: start;
+            }
+    
+            p {
+                margin: pxe(48) 0 0;
+                font-size: pxe(16);
+                font-weight: 400;
+                line-height: pxe(32);
+                text-align: left;
+            }
+    
+        }
+    
+    
+        div.main-logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            div.main-logo {
+                display: flex;
+                justify-content: center;
+    
+                width: pxe(596.75);
+                height: pxe(300);
+                
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(pxe(41.5127));
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: pxe(18.1618);
+
+
+                img {
+                    display: block;
+                    height: pxe(295);
+                    width: pxe(295);
+                }
+            }
+    
+    
+    
+            
+        
+    
+        }
+    
+    }
+
+
+    
+
+
+    
+}

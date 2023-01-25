@@ -1,0 +1,157 @@
+@import "../UTILS/color.scss";
+@import '../UTILS/function.scss';
+
+
+
+
+
+
+
+
+div.timer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $white;
+
+
+
+    width: pxe(460);
+    height: pxe(145);
+
+    margin: pxe(28) 0 0;
+    
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(pxe(41.5127));
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: pxe(18.1618);
+
+
+    [class $= -pie-timer] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        [class $= -timer] {
+            font-size: pxe(32);
+        }
+        
+        span.label {
+            margin-top: pxe(8);
+            font-size: pxe(16);
+            display: block;
+            max-width: min-content;
+        }
+    }
+
+
+}
+
+
+
+
+button.register-button {
+    width: pxe(460);
+    height: pxe(145);
+    font-size: pxe(48);
+    font-weight: 400;
+    color: $white;
+
+    position: relative;
+    margin-top: pxe(28);
+    display: inline-block;
+
+    margin: pxe(28) 0 0;
+    
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(pxe(41.5127));
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: pxe(18.1618);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: pxe(18.16);
+        padding: pxe(4);
+        background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+
+        animation-name: register-border-color;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: pxe(18.16);
+        background-image: linear-gradient(to right, transparent, #ffffff11, transparent);
+        display: block;
+        height: 100%;
+        width: pxe(100);
+
+
+
+        animation-name: register-glowbg;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+    }
+}
+
+@keyframes register-glowbg {
+    0% {
+        transform: translateX(pxe(-360));
+    }
+}
+
+@keyframes register-border-color {
+    0% {
+        background: linear-gradient(0deg, $tertiary-blue, $tertiary-green);
+    }
+    11% {
+        background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+    }
+    22%{
+        background: linear-gradient(90deg, $tertiary-blue, $tertiary-green);
+    }
+    33%{
+        background: linear-gradient(135deg, $tertiary-blue, $tertiary-green);
+    }
+    44%{
+        background: linear-gradient(180deg, $tertiary-blue, $tertiary-green);
+    }
+    55%{
+        background: linear-gradient(225deg, $tertiary-blue, $tertiary-green);
+    }
+    66%{
+        background: linear-gradient(270deg, $tertiary-blue, $tertiary-green);
+    }
+    77%{
+        background: linear-gradient(315deg, $tertiary-blue, $tertiary-green);
+    }
+    100%{
+        background: linear-gradient(360, $tertiary-blue, $tertiary-green);
+    }
+}

@@ -1,0 +1,73 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+Nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: pxe(100);
+
+
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+
+    background-color: rgba($primary, 0.9);
+
+    color: $white;
+
+    div.nav-container {
+        display: flex;
+        align-items: center;
+        width: 85%;
+        min-height: inherit;
+        
+
+        div.nav-logo {
+            font-size: pxe(36);
+            font-weight: 700;
+            margin-right: auto;
+        }
+    
+        a {
+            font-size: pxe(16);
+            font-weight: 600;
+            color: $white;
+            margin: 0 pxe(20) 0;
+        }
+    
+        a div {
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: pxe(1000);
+            height: pxe(40);
+            width:  pxe(146);
+            color: $primary;
+        }
+    }
+
+    
+    .active {
+        padding: pxe(16) pxe(16) pxe(12);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: pxe(4);
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to right, $tertiary-green, $tertiary-blue);
+            border-radius: pxe(5000);
+        }
+    }
+
+}

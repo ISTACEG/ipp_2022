@@ -1,0 +1,194 @@
+@import '../UTILS/color.scss';
+@import '../UTILS/function.scss';
+
+
+
+
+
+
+
+div.eventsBanner-div {
+    display: flex;
+    flex-direction: column;
+
+    min-height: pxe(760);
+    width: 100%;
+    background-color: $primary;
+    color: $white;
+    padding: pxe(114) 0 0;
+    cursor: pointer;
+    // overflow-y: hidden;
+
+
+
+
+
+    div.eventsBanner-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 1;
+
+
+        div.events-text-div {
+            display: block;
+    
+            h1 {
+                font-size: pxe(48);
+                font-weight: 400;
+                text-align: start;
+
+                // transform: translateX(-200%);
+                // transition: transform 2s;
+            }
+    
+    
+            div.text-background-div {
+                margin: pxe(54) 0 0;
+                display: block;
+                width: pxe(440);
+                text-align: start;
+    
+                font-size: pxe(16);
+                padding: pxe(24);
+                line-height: pxe(32);
+    
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(pxe(41.5127));
+                border-radius: pxe(18.1618);
+
+                
+                // transform: translateX(-400%);
+                // transition: transform 2s;
+    
+                
+                span {
+                    display: block;
+                    text-align: end;
+                    margin: pxe(16) 0 0;
+                    color: $tertiary-blue;
+                }
+            }
+    
+    
+        }
+    
+    
+    
+    
+    
+        div.events-banner-poster {
+            display: flex;
+            // grid-template-columns: repeat(3, pxe(250));
+            justify-content: end;
+            justify-items: end;
+    
+            height: pxe(554);
+            width: 60%;
+            overflow: hidden;
+            position: relative;
+
+
+
+            div.top-end {
+                position: absolute;
+                top: 0;
+                display: block;
+                height: pxe(30);
+                width: 100%;
+                z-index: 1000;
+                bottom: pxe(2) solid black;
+                background-image: linear-gradient(to bottom, $primary, transparent);
+            }
+            div.bottom-end {
+                position: absolute;
+                bottom: 0;
+                display: block;
+                height: pxe(30);
+                width: 100%;
+                z-index: 1000;
+                bottom: pxe(2) solid black;
+                background-image: linear-gradient(to top, $primary, transparent);
+            }
+    
+    
+            [class ^= EventsPosterCard-list-] {
+                margin: 0 pxe(4);
+                
+
+                [class ^= EventsPosterCard-list-section-] {
+                    animation-name: running-banner-card;
+                    animation-duration: 20s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    // -webkit-animation-direction: reverse;
+                    animation-fill-mode: forwards;
+                    animation-play-state: inherit;
+
+                    
+                    div.eventsPosterCard {
+                        margin: pxe(16) 0 0;
+                    }
+
+
+                }
+
+
+
+
+                
+
+            }
+    
+    
+            .EventsPosterCard-list-1 {
+
+                [class ^= EventsPosterCard-list-section-] {
+                    animation-direction: reverse;
+                    animation-duration: 30s;
+                }
+            }
+
+            .EventsPosterCard-list-2 {
+
+                [class ^= EventsPosterCard-list-section-] {
+                    animation-duration: 26s;
+                }
+            }
+    
+    
+    
+    
+    
+        }
+
+
+
+    }
+
+    
+
+}
+
+
+
+
+
+@keyframes running-banner-card {
+    0% {
+        transform: translateY(pxe(-972.35));
+        // bottom: 0;
+    }
+    100%  {
+        
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
