@@ -4,7 +4,7 @@
 
 
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     div.eventsBanner-div {
         display: flex;
         flex-direction: column;
@@ -26,9 +26,10 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+
     
             // align-items: center;
-            // justify-content: space-evenly;
+            justify-content: center;
             width: 100%;
             z-index: 1;
     
@@ -243,7 +244,7 @@
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     
 
 

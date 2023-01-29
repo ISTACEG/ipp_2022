@@ -6,7 +6,7 @@
 
 
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
 
     div.Event-card-list-wrapper {
         display: flex;
@@ -26,13 +26,15 @@
         div.workshop-container {
             display: flex;
             flex-direction: column;
+            
             width: 100%;
+            // min-width: max-content;
 
             div.workshop-card {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-
+                flex-wrap: wrap;
 
                 background: rgba(255, 255, 255, 0.18);
                 backdrop-filter: blur(pxe(41.5127));
@@ -100,7 +102,6 @@
                     justify-content: start;
 
                     padding: 0 pxe(16);
-                    width: max-content;
                     height: pxe(250);
                     color: $white;
             
@@ -116,7 +117,7 @@
 
                     div {
                         font-size: pxe(18);
-                        width: max-content;
+                        width: 100%;
                         display: flex;
                         margin: pxe(8) 0;
             
@@ -268,7 +269,7 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     
 
     div.Event-card-list-wrapper {
@@ -399,13 +400,15 @@
                         font-size: pxe(18);
                         width: 100%;
                         display: flex;
+                        flex-direction: column;
                         justify-content: space-between;
                         margin: pxe(8) 0;
-                        text-align: end;
+                        text-align: center;
             
                         p {
                             font-weight: 700;
                             margin: 0 pxe(8);
+                            text-align: center;
                         }
                     }
                      

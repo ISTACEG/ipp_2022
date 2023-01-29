@@ -12,19 +12,22 @@
 div.about-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     min-height: pxe(760);
     width: 100%;
     background-color: $primary;
     color: $white;
-    padding: pxe(114) 0 0;
+    padding: pxe(114) 0 pxe(36);
 
 
 
     div.about-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
+        width: 100%;
 
         img.about-poster {
             display: block;
@@ -33,20 +36,19 @@ div.about-div {
             border-radius: pxe(18.16);
             border: pxe(2.4) solid $tertiary-green;
             margin-top: pxe(40);
-
+            
+            
             z-index: 5;
         }
-
-
-
 
         div.about-text-div {
             text-align: start;
             display: block;
             height: max-content;
-            width: fit-content;
+            width: max-content;
             z-index: 5;
             margin-top: pxe(24);
+            padding: 0 pxe(36);
 
             h1 {
                 text-align: center;
@@ -94,7 +96,7 @@ div.about-div {
 
 
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     
 
 

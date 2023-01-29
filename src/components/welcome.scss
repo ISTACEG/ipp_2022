@@ -6,6 +6,7 @@ div.welcome-div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
 
     // align-items: center;
 
@@ -22,15 +23,17 @@ div.welcome-div {
         display: flex;
         flex-wrap: wrap;
 
-        justify-content: space-between;
+        justify-content: center;
         z-index: 1;
         width: 100%;
 
         div.main-info {
             display: block;
             color: $white;
-            max-width: pxe(567);
-            margin-right: pxe(24);
+            
+            // width: 100%;
+            // margin-right: auto;
+            padding-right: pxe(36);
     
             h1 {
                 font-size: pxe(48);
@@ -51,6 +54,10 @@ div.welcome-div {
                 font-weight: 400;
                 text-align: start;
                 margin-top: pxe(32);
+            }
+
+            * {
+                max-width: pxe(567);
             }
     
         }
@@ -109,7 +116,7 @@ div.welcome-div {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
     
 

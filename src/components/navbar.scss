@@ -4,7 +4,7 @@
 
 
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     
     Nav.navbar {
         display: flex;
@@ -99,7 +99,7 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     
 
 
