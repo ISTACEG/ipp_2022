@@ -4,195 +4,330 @@
 
 
 
+@media screen and (min-width: 600px) {
 
 
-div.event-detail {
-    display: block;
-    z-index: 5;
-    margin: pxe(142) 0;
-
-
-
-    div.wrapper {
+        
+    div.event-detail {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        z-index: 5;
+        margin: pxe(142) 0;
 
 
-        div.container-1 {
+
+
+            
+        h1.eventName {
+            display: block;
+            font-size: pxe(48);
+            font-weight: 700;
+            color: $white;
+            margin-bottom: pxe(24);
+        }
+
+        div.wrapper {
             display: flex;
-            flex-direction: column;
+            width: 100%;
+            max-width: 90%;
 
+            div.container-1 {
+                height: max-content;
+                // width: 100%;
+                padding: pxe(24);
 
-            div.text-info {
-                color: $white;
-                width: pxe(500);
-        
-                h1.eventName {
-                    font-size: pxe(48);
-                    font-weight: 700;
-                }
-        
+                display: flex;
+                flex-direction: column;
+                
+                
+
         
                 p.eventDescription {
+                    color: $white; 
+                    display: block;
                     font-size: pxe(16);
                     font-weight: 400;
                     text-align: start;
-                    margin-top: pxe(16);
+                    // margin-top: pxe(16);
+                    line-height: pxe(24);
+                    // padding: 0 pxe(24);
                 }
-        
+
+                span.eventDescription {
+                    margin-top: pxe(24);
+                }
         
             }
-
-            
-            div.event-info-bg {
-                margin-top: pxe(48);
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-        
-                width: pxe(450);
-        
-                background: rgba(255, 255, 255, 0.18);
-                backdrop-filter: blur(pxe(41.5127));
-        
-                border-radius: pxe(18.1618);
-                padding: pxe(10);
-                position: relative;
-                overflow: hidden;
-
-
-        
-                div.event-info-item {
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                    padding-bottom: pxe(8);
-                    border-bottom: pxe(2) solid $white;
-                    margin: pxe(14) 0;
-        
-                    span {
-                        font-size: pxe(16);
-                        font-weight: 400;
-                        color: $white;
-                    }
-        
-                    span.h-span {
-                        font-weight: 700;
-                    }
-                }
-
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: -50%;
-                    bottom: 0;
-                    right: 0;
-                    border-radius: pxe(18.16);
-                    background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
-                    display: block;
-                    height: 200%;
-                    width: pxe(100);
-            
-            
-            
-                    animation-name: register-glowbg;
-                    animation-duration: 6s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-            
-                }
-            }
-        
-        }
-    
-        
-    
-    
-    
-        div.container-2 {
-            display: flex;
-            flex-direction: column;
-    
-
-
-            div.img-bg {
-                display: block;
-                height: max-content;
-                width: max-content;
-                position: relative;
-
-
-
-                img.eventposter {
-                    height: pxe(300);
-                    width: pxe(500);
-                    object-fit: cover;
-                    object-position: center;
-                    border-radius: pxe(18.16);
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    inset: 0;
-                    border-radius: pxe(18.16);
-                    padding: pxe(2.4);
-                    background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
-            
-                    animation-name: register-border-color;
-                    animation-duration: 5s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-            
-                    -webkit-mask: 
-                      linear-gradient(#fff 0 0) content-box, 
-                      linear-gradient(#fff 0 0);
-                    mask: 
-                      linear-gradient(#fff 0 0) content-box, 
-                      linear-gradient(#fff 0 0);
-                    -webkit-mask-composite: destination-out;
-                    mask-composite: exclude;
-                    pointer-events: none;
-                }
-            }
-            
         
             
         
-            div.event-contact {
-                margin-top: pxe(48);
+        
+        
+            div.container-2 {
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                flex-wrap: wrap;
+
+
+                div.img-bg {
+                    grid-row: span 2;
+                    justify-self: center;
+                    display: block;
+                    height: max-content;
+                    width: max-content;
+                    position: relative;
+
+
+
+                    img.eventposter {
+                        height: max-content;
+                        width: pxe(500);
+                        object-fit: cover;
+                        object-position: center;
+                        border-radius: pxe(18.16);
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: pxe(18.16);
+                        padding: pxe(2.4);
+                        background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
                 
+                        animation-name: register-border-color;
+                        animation-duration: 5s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
                 
-                h2 {
-                    font-size: pxe(32);
-                    font-weight: 400;
-                    color: $white;
+                        -webkit-mask: 
+                        linear-gradient(#fff 0 0) content-box, 
+                        linear-gradient(#fff 0 0);
+                        mask: 
+                        linear-gradient(#fff 0 0) content-box, 
+                        linear-gradient(#fff 0 0);
+                        -webkit-mask-composite: destination-out;
+                        mask-composite: exclude;
+                        pointer-events: none;
+                    }
+                }
+                
+            
+                a {
+                    display: flex;
+                    width: 100%;
+                    height: max-content;
+
+                    button.register {
+                        width: 90%;
+                        height: max-content;
+                        padding: pxe(16);
+                        font-size: pxe(32);
+                        font-weight: 400;
+                        color: $white;
+    
+                        position: relative;
+                        margin-top: pxe(28);
+                        display: inline-block;
+    
+                        margin: pxe(28) 0 0;
+                        
+                        background: rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(pxe(41.5127));
+                        /* Note: backdrop-filter has minimal browser support */
+                        
+                        border-radius: pxe(18.1618);
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            border-radius: pxe(18.16);
+                            padding: pxe(4);
+                            background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+    
+                            animation-name: register-border-color;
+                            animation-duration: 5s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            animation-delay: 1s;
+    
+                            -webkit-mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: destination-out;
+                            mask-composite: exclude;
+                            pointer-events: none;
+                        }
+    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: pxe(18.16);
+                            background-image: linear-gradient(to right, transparent, #ffffff11, transparent);
+                            display: block;
+                            height: 100%;
+                            width: pxe(100);
+    
+    
+    
+                            animation-name: register-glowbg;
+                            animation-duration: 6s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            animation-delay: 6s;
+    
+                        }
+                    }
+    
+                }  
+                
+                div.event-contact {
+                    margin: pxe(24) 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    
+                    h2 {
+                        font-size: pxe(32);
+                        font-weight: 400;
+                        color: $white;
+                    }
+
+                    div.organizer-info-bg {
+                        margin-top: pxe(16);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                
+                        min-width: pxe(450);
+                
+                        background: rgba(255, 255, 255, 0.18);
+                        backdrop-filter: blur(pxe(41.5127));
+                
+                        border-radius: pxe(18.1618);
+                        padding: pxe(10);
+
+                        overflow: hidden;
+
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -50%;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: pxe(18.16);
+                            background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                            display: block;
+                            height: 200%;
+                            width: pxe(100);
+                    
+                    
+                    
+                            animation-name: register-glowbg;
+                            animation-duration: 6s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                    
+                        }
+                
+                        div.organizer-info-item {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            padding-bottom: pxe(8);
+                            border-bottom: pxe(2) solid $white;
+                            margin: pxe(14) 0;
+                
+                            span {
+                                font-size: pxe(16);
+                                font-weight: 400;
+                                color: $white;
+                                padding-left: pxe(8);
+                            }
+                
+                            span.h-span {
+                                font-weight: 700; 
+                                padding-right: pxe(8);
+                                padding-left: 0;
+                            }
+                        }
+                    }
+
+
                 }
 
-                div.organizer-info-bg {
-                    margin-top: pxe(16);
+            
+                div.event-info-bg {
+                    margin: pxe(36) 0 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
             
-                    width: pxe(450);
-            
+                    min-width: pxe(450);
+                    
+
                     background: rgba(255, 255, 255, 0.18);
                     backdrop-filter: blur(pxe(41.5127));
             
                     border-radius: pxe(18.1618);
-                    padding: pxe(10);
-
+                    padding: pxe(16);
+                    position: relative;
                     overflow: hidden;
 
 
-                    
+            
+                    div.event-info-item {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        padding-bottom: pxe(8);
+                        border-bottom: pxe(2) solid $white;
+                        margin: pxe(14) 0;
+                        text-align: end;
+                        color: $white;
+            
+                        span {
+                            display: inline-block;
+                            padding: 0 0 0 pxe(16);
+                            font-size: pxe(16);
+                            font-weight: 400;
+                            color: $white;
+                            text-align: end;
+                        }
+
+                        div {
+                            display: flex;
+                            color: $white;
+                            flex-direction: column;
+                            
+                            text-align: end;
+                        }
+
+            
+                        span.h-span {
+                            font-weight: 700;
+                            padding: 0 pxe(16) 0 0;
+                            text-align: end;
+                        }
+                    }
+
 
                     &::after {
                         content: "";
@@ -215,14 +350,331 @@ div.event-detail {
                         animation-direction: alternate;
                 
                     }
+                }   
+            }
+        
+        }
+
+        
+        
+
+
+
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+
+    div.event-detail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        z-index: 5;
+        margin: pxe(144) 0;
+    
+    
+        h1.eventName {
+            color: $white;
+            font-size: pxe(48);
+            font-weight: 700;
+        }
+    
+        div.wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    
+            div.container-1 {
+                display: flex;
+                flex-direction: column;
+                color: $white;
+                width: 100%;
+        
+        
+        
+                p.eventDescription {
+                    font-size: pxe(16);
+                    font-weight: 400;
+                    text-align: start;
+                    margin-top: pxe(24);
+                    padding: pxe(16);
+                }
+        
+        
             
-                    div.organizer-info-item {
+    
+                
+            
+            }
+        
+            
+        
+        
+        
+            div.container-2 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: pxe(32);
+    
+                div.img-bg {
+                    order: 1;
+                    display: block;
+                    height: max-content;
+                    width: 100%;
+                    position: relative;
+                    margin-top: pxe(24);
+                    
+    
+    
+                    img.eventposter {
+                        height: max-content;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        border-radius: pxe(18.16);
+                    }
+    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: pxe(18.16);
+                        padding: pxe(2.4);
+                        background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+                
+                        animation-name: register-border-color;
+                        animation-duration: 5s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                
+                        -webkit-mask: 
+                          linear-gradient(#fff 0 0) content-box, 
+                          linear-gradient(#fff 0 0);
+                        mask: 
+                          linear-gradient(#fff 0 0) content-box, 
+                          linear-gradient(#fff 0 0);
+                        -webkit-mask-composite: destination-out;
+                        mask-composite: exclude;
+                        pointer-events: none;
+                    }
+                }
+                
+
+                div.event-contact {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    order: 2;
+                    
+                    
+                    h2 {
+                        font-size: pxe(32);
+                        font-weight: 400;
+                        color: $white;
+                    }
+    
+                    div.organizer-info-bg {
+                        margin-top: pxe(16);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                
+                        width: 100%;
+                
+                        background: rgba(255, 255, 255, 0.18);
+                        backdrop-filter: blur(pxe(41.5127));
+                
+                        border-radius: pxe(18.1618);
+                        padding: pxe(10);
+    
+                        overflow: hidden;
+    
+    
+                        
+    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -50%;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: pxe(18.16);
+                            background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                            display: block;
+                            height: 200%;
+                            width: pxe(100);
+                    
+                    
+                    
+                            animation-name: register-glowbg;
+                            animation-duration: 6s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                    
+                        }
+                
+                        div.organizer-info-item {
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            padding-bottom: pxe(8);
+                            border-bottom: pxe(2) solid $white;
+                            margin: pxe(14) 0;
+                
+                            span {
+                                font-size: pxe(16);
+                                font-weight: 400;
+                                color: $white;
+                            }
+                
+                            span.h-span {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+    
+    
+    
+    
+    
+    
+    
+                }
+            
+
+
+
+                a {
+                    display: flex;
+                    width: 100%;
+                    height: max-content;
+
+                    button.register {
+                        width: 90%;
+                        height: max-content;
+                        padding: pxe(16);
+                        font-size: pxe(32);
+                        font-weight: 400;
+                        color: $white;
+    
+                        position: relative;
+                        margin-top: pxe(28);
+                        display: inline-block;
+    
+                        margin: pxe(28) 0 0;
+                        
+                        background: rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(pxe(41.5127));
+                        /* Note: backdrop-filter has minimal browser support */
+                        
+                        border-radius: pxe(18.1618);
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            border-radius: pxe(18.16);
+                            padding: pxe(4);
+                            background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+    
+                            animation-name: register-border-color;
+                            animation-duration: 5s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            animation-delay: 1s;
+    
+                            -webkit-mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: destination-out;
+                            mask-composite: exclude;
+                            pointer-events: none;
+                        }
+    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: pxe(18.16);
+                            background-image: linear-gradient(to right, transparent, #ffffff11, transparent);
+                            display: block;
+                            height: 100%;
+                            width: pxe(100);
+    
+    
+    
+                            animation-name: register-glowbg;
+                            animation-duration: 6s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            animation-delay: 6s;
+    
+                        }
+                    }
+    
+                }  
+                
+                div.event-info-bg {
+                    margin: pxe(24) 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    order: 1;
+
+                    width: 100%;
+            
+                    background: rgba(255, 255, 255, 0.18);
+                    backdrop-filter: blur(pxe(41.5127));
+            
+                    border-radius: pxe(18.1618);
+                    padding: pxe(10);
+                    position: relative;
+                    overflow: hidden;
+    
+    
+            
+                    div.event-info-item {
                         display: flex;
                         width: 100%;
                         justify-content: space-between;
                         padding-bottom: pxe(8);
                         border-bottom: pxe(2) solid $white;
                         margin: pxe(14) 0;
+                        text-align: end;
             
                         span {
                             font-size: pxe(16);
@@ -230,31 +682,56 @@ div.event-detail {
                             color: $white;
                         }
             
+                        div {
+                            display: flex;
+                            color: $white;
+                            flex-direction: column;
+                            text-align: end;
+                        }
+
+
                         span.h-span {
                             font-weight: 700;
                         }
                     }
+    
+    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -50%;
+                        bottom: 0;
+                        right: 0;
+                        border-radius: pxe(18.16);
+                        background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                        display: block;
+                        height: 200%;
+                        width: pxe(100);
+                
+                
+                
+                        animation-name: register-glowbg;
+                        animation-duration: 6s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                
+                    }
                 }
-
-
-
-
-
-
-
+    
+                
             }
-
-            
+        
         }
     
+        
+        
+    
+    
+    
+    
+    
+    
     }
-
-    
-    
-
-
-
-
-
 
 }

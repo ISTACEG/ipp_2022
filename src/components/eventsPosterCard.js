@@ -7,15 +7,6 @@ import './eventsPosterCard.scss'
 
 function EventsPosterCard(props) {
 
-    var eventType = '#tech_event'
-
-    if (props.eventType == '1') {
-        eventType = '#tech_event'
-    }
-    else {
-        eventType = '#non_tech_event'
-    }
-
     return (
         <div className="eventsPosterCard">
             <span className="header">{props.header}</span>
@@ -23,9 +14,13 @@ function EventsPosterCard(props) {
 
             <div className="hashtag">
                 {
-                    
-                    (props.eventType == '1')? (<span className='hash-tech'>#tech_event</span>):(<span className='hash-non-tech'>#non_tech_event</span>)
-                                  
+                    {
+                        1: <span className='hash-tech'>#tech_event</span>,
+                        2: <span className='hash-non-tech'>#non_tech_event</span>,
+                        3: <span className='hash-non-tech'>#hackathon</span>,
+                        4: <span className='hash-non-tech'>#workshop</span>
+                    }[props.eventType]
+                                            
                 }
             </div>
 

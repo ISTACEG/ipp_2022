@@ -5,7 +5,7 @@ import Footer from '../components/footer'
 import { useEffect } from 'react';
 
 
-function EventInfo(props) {
+function EventInfo() {
 
     useEffect(() => {
         window.scrollTo(0,0)
@@ -16,7 +16,7 @@ function EventInfo(props) {
             <Navbar />
             <div className="event-info">
                 <div className='sections'>
-                    <EventDetail imgUrl={props} />
+                    <EventDetail  />
                     <div className='a-bg-circle'></div>
                 </div>
             </div>

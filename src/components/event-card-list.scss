@@ -6,21 +6,502 @@
 
 
 
-div.Event-Card-List {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 75%;
-    padding-top: pxe(48);
-    position: relative;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(pxe(41.5127));
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: pxe(18.1618);
+@media screen and (min-width: 600px) {
 
-    z-index: 1;
+    div.Event-card-list-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
 
+        h1 {
+            font-size: pxe(48);
+            font-weight: 400;
+            color: $white;
+            z-index: 5;
+            margin-right: auto;
+        }
 
 
+        div.workshop-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            div.workshop-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+
+                background: rgba(255, 255, 255, 0.18);
+                backdrop-filter: blur(pxe(41.5127));
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: pxe(18.16);
+                height: 100%;
+                margin: pxe(24);
+                padding: pxe(24);
+                position: relative;
+                cursor: pointer;
+                z-index: 3;
+
+
+                div.edge-1 {
+                    display: block;
+                    background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+                    background-size: 200% 200%;
+            
+                    height: 75%;
+                    width: pxe(12);
+                    position: absolute;
+                    right: 0;
+                    border-radius: pxe(18.16) 0 0 pxe(18.16);
+            
+            
+                    animation-name: event-card-edge-anime;
+                    animation-duration: 5s;
+                    animation-timing-function: ease;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+                div.edge-2 {
+                    display: block;
+                    background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+                    background-size: 200% 200%;
+            
+                    height: 75%;
+                    width: pxe(12);
+                    position: absolute;
+                    left: 0;
+                    border-radius: 0 pxe(18.16) pxe(18.16) 0;
+            
+            
+                    animation-name: event-card-edge-anime;
+                    animation-duration: 5s;
+                    animation-timing-function: ease;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+                img {
+                    display: block;
+                    height: max-content;
+                    width: pxe(250);
+                    border-radius: pxe(18.16);
+                    object-fit: contain;
+                    object-position: center;
+                }
+
+
+                div.info-grid {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: start;
+
+                    padding: 0 pxe(16);
+                    width: max-content;
+                    height: pxe(250);
+                    color: $white;
+            
+                    h2.event-heading {
+                        display: block;
+                        width: 100%;
+                        padding: 0 pxe(8);
+                        font-size: pxe(32);
+
+                        border-bottom: pxe(2) solid $tertiary-green;
+                        margin-bottom: pxe(8);
+                    }
+
+                    div {
+                        font-size: pxe(18);
+                        width: max-content;
+                        display: flex;
+                        margin: pxe(8) 0;
+            
+                        p {
+                            font-weight: 700;
+                            margin: 0 pxe(8);
+                        }
+                    }
+                     
+                    button.register {
+                        width: 100%;
+                        font-size: pxe(24);
+                        padding: pxe(16);
+                        font-weight: 400;
+                        color: $white;
+                        margin-top: auto;
+                        position: relative;
+                        display: inline-block;
+                    
+                        
+                        background-color: $primary;
+
+                        border-radius: pxe(18.1618);
+                    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            border-radius: pxe(18.16);
+                            padding: pxe(4);
+                            background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+                    
+                            // animation-name: register-border-color;
+                            // animation-duration: 5s;
+                            // animation-timing-function: linear;
+                            // animation-iteration-count: infinite;
+                            // animation-direction: alternate;
+                    
+                            -webkit-mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: destination-out;
+                            mask-composite: exclude;
+                            pointer-events: none;
+                        }
+                    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: pxe(18.16);
+                            background-image: linear-gradient(to right, transparent, #ffffff11, transparent);
+                            display: block;
+                            height: 100%;
+                            width: pxe(100);
+                    
+                    
+                            // animation-name: register-glowbg;
+                            // animation-duration: 6s;
+                            // animation-timing-function: linear;
+                            // animation-iteration-count: infinite;
+                            // animation-direction: alternate;
+                    
+                        }
+                    }
+                    
+
+
+                }
+
+
+
+            }
+
+        }
+
+
+
+
+
+        div.Event-Card-List {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            padding: 0 pxe(48);
+            position: relative;
+            border-radius: pxe(18.1618);
+    
+            z-index: 1;
+    
+        }
+    
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+
+    div.Event-card-list-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        h1 {
+            font-size: pxe(48);
+            font-weight: 400;
+            color: $white;
+            z-index: 5;
+        }
+
+
+
+
+        div.workshop-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: max-content;
+            // min-width:  pxe(300);
+
+            div.workshop-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                align-items: center;
+                // justify-content: center;
+                flex-direction: column;
+
+                // min-height: pxe(300);
+                // min-width:  pxe(360);
+                // height: max-content;
+                width: 100%;
+
+
+                background: rgba(255, 255, 255, 0.18);
+                backdrop-filter: blur(pxe(41.5127));
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: pxe(18.16);
+                height: 100%;
+                margin: pxe(24);
+                padding: pxe(16);
+                position: relative;
+                cursor: pointer;
+                z-index: 3;
+
+
+                div.edge-1 {
+                    display: block;
+                    background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+                    background-size: 200% 200%;
+            
+                    height: 70%;
+                    width: pxe(8);
+                    position: absolute;
+                    right: 0;
+                    border-radius: pxe(18.16) 0 0 pxe(18.16);
+            
+            
+                    animation-name: event-card-edge-anime;
+                    animation-duration: 5s;
+                    animation-timing-function: ease;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                            
+                    top: 10%;
+                }
+                div.edge-2 {
+                    display: block;
+                    background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+                    background-size: 200% 200%;
+            
+                    height: 70%;
+                    width: pxe(8);
+                    position: absolute;
+                    left: 0;
+                            
+                    // margin-top: 5%;
+                    border-radius: 0 pxe(18.16) pxe(18.16) 0;
+            
+            
+                    animation-name: event-card-edge-anime;
+                    animation-duration: 5s;
+                    animation-timing-function: ease;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+
+                    top: 10%;
+                }
+
+                img {
+                    display: block;
+                    height: max-content;
+                    width: 100%;
+                    border-radius: pxe(18.16);
+                    object-fit: contain;
+                    object-position: center;
+                }
+
+
+                div.info-grid {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: start;
+
+                    padding: 0 pxe(16);
+                    width: 100%;
+                    height: max-content;
+                    color: $white;
+                    margin-top: pxe(16);
+            
+                    h2.event-heading {
+                        display: block;
+                        // width: 100%;
+                        padding: 0 pxe(8);
+                        font-size: pxe(32);
+
+                        border-bottom: pxe(2) solid $tertiary-green;
+                        margin-bottom: pxe(8);
+                    }
+
+                    div {
+                        font-size: pxe(18);
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: pxe(8) 0;
+                        text-align: end;
+            
+                        p {
+                            font-weight: 700;
+                            margin: 0 pxe(8);
+                        }
+                    }
+                     
+                    button.register {
+                        width: 100%;
+                        font-size: pxe(24);
+                        padding: pxe(16);
+                        font-weight: 400;
+                        color: $white;
+                        margin-top: pxe(16);
+                        position: relative;
+                        display: inline-block;
+                    
+                        
+                        background-color: $primary;
+
+                        border-radius: pxe(18.1618);
+                    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            border-radius: pxe(18.16);
+                            padding: pxe(4);
+                            background: linear-gradient(45deg, $tertiary-blue, $tertiary-green);
+                    
+                            // animation-name: register-border-color;
+                            // animation-duration: 5s;
+                            // animation-timing-function: linear;
+                            // animation-iteration-count: infinite;
+                            // animation-direction: alternate;
+                    
+                            -webkit-mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            mask: 
+                            linear-gradient(#fff 0 0) content-box, 
+                            linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: destination-out;
+                            mask-composite: exclude;
+                            pointer-events: none;
+                        }
+                    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            border-radius: pxe(18.16);
+                            background-image: linear-gradient(to right, transparent, #ffffff11, transparent);
+                            display: block;
+                            height: 100%;
+                            width: pxe(100);
+                    
+                    
+                            // animation-name: register-glowbg;
+                            // animation-duration: 6s;
+                            // animation-timing-function: linear;
+                            // animation-iteration-count: infinite;
+                            // animation-direction: alternate;
+                    
+                        }
+                    }
+                    
+
+
+                }
+
+
+
+            }
+
+        }
+
+
+
+        div.Event-Card-List {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0 pxe(16) 0;
+            position: relative;
+            // background: rgba(255, 255, 255, 0.18);
+            // backdrop-filter: blur(pxe(41.5127));
+            /* Note: backdrop-filter has minimal browser support */
+            border-radius: pxe(18.1618);
+    
+            z-index: 1;
+    
+    
+            
+    
+        }
+    }
+
+    
 }

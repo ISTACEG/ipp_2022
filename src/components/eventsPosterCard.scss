@@ -34,7 +34,8 @@ div.eventsPosterCard {
         width: pxe(190);
         border-radius: pxe(10.0649995803833);
         object-fit: cover;
-        object-position: center;        
+        object-position: center; 
+        border: 2px solid $primary;       
     }
 
 

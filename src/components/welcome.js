@@ -21,12 +21,15 @@ function Welcome() {
             <div className="main-infor-container">
                 <div className='main-info'>
                     <h1>Welcome</h1>
-                    <p>The Department of Information Science and Technology, College of Engineering Guindy takes great pleasure in presenting I++ 2022, the flagship intra college symposium which is organized by the industrious Information Science and Technology Association which the entire Anna University looks forward too. I++ is the perfect blend of brain-wracking workshops, technical events and non-technical events, the title sponsors and associate sponsors graciously offer to make this event a grand success.</p>
+                    <p>The Department of Information Science and Technology, College of Engineering Guindy takes great pleasure in presenting I++ 2022, the flagship intra college symposium which is organized by the industrious Information Science and Technology Association which the entire Anna University looks forward too. I++ is the perfect blend of brain-wracking workshops, technical events and non-technical events.</p>
+
+                    <h2>Our Partners</h2>
+                    <SponsorCaraousal />
                 </div>
 
                 <div className='main-logo-container'>
                     <div className='main-logo'>
-                        <img src="i++_mainlogo.png" alt="" />
+                        <img src="./posters/i++22 white 1.png" alt="" />
                     </div>
 
 
@@ -38,7 +41,11 @@ function Welcome() {
 
            
             
-            <SponsorCaraousal />
+
+
+
+
+
 
 
         </div>

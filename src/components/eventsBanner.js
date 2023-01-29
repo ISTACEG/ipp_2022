@@ -3,7 +3,8 @@ import './eventsBanner.scss'
 import EventsPosterCard from './eventsPosterCard'
 import _ from 'lodash'
 import { useEffect, useRef, useState } from 'react'
-import {eventListData} from '../resources/event-list-data'
+import {eventListData, workshopData, hackathonData, nontechEventsListData} from '../resources/event-list-data'
+import { useNavigate } from "react-router-dom";
 
 
 function EventsBanner() {
@@ -13,6 +14,18 @@ function EventsBanner() {
     var event_div_ref = useRef();
     var event_text_h_div_ref = useRef(null);
     var event_text_pbg_div_ref = useRef(null);
+    const navigate = useNavigate()
+
+
+    var eventList = []
+
+    if (eventList.length < 12) {
+        eventList.push(...eventListData)
+        eventList.push(...workshopData)
+        eventList.push(...nontechEventsListData)
+        eventList.push(...hackathonData)
+        eventList.push(eventList[0])
+    }
 
 
     useEffect(() => {
@@ -28,6 +41,11 @@ function EventsBanner() {
         //     event_text_pbg_div_ref.current.style.transform = "translateX(0)"
         // } 
 
+        
+
+        
+
+
 
     })
     
@@ -36,18 +54,20 @@ function EventsBanner() {
 
 
 
-    var eventList = eventListData
 
 
+    var numList=3;
 
-    var lenDiv = Math.round(eventList.length/3)
+    var lenDiv = Math.ceil(eventList.length/numList)
 
 
-
+    const event_div_ref_click = () => {
+        navigate("/events");
+    }
     
 
     return (
-        <div className="eventsBanner-div" ref={event_div_ref}>
+        <div className="eventsBanner-div" ref={event_div_ref} onClick={event_div_ref_click}>
 
             <div className="eventsBanner-container">
 
@@ -69,7 +89,7 @@ function EventsBanner() {
 
                     {
                                         
-                        _.times(lenDiv, (i) => (
+                        _.times(numList, (i) => (
                             <div className={'EventsPosterCard-list-'+i.toString()}>
                                 
                                 {_.times(2, (j) => (

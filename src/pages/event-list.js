@@ -17,8 +17,9 @@ function EventList() {
         <>
             <Navbar />
             <div className="event-List">
+                
                 <div className='sections'>
-                    <h1>Events</h1>
+                    
                     <EventCardList />
                     <div className='a-bg-circle'></div>
                     <div className='b-bg-circle'></div>

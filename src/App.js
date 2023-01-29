@@ -27,7 +27,7 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='events' element={<EventList />}/>
           <Route path='register' element={<Register />} />
-          <Route path='details' element={<EventInfo />} />
+          <Route path='details/:type' element={<EventInfo />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
       </div>

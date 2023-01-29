@@ -10,17 +10,17 @@ function Footer() {
                 <div className="footer-div">
 
                     <div className="social-div">
-                        <img src="ISTA_GROUP_LOGO-removebg-preview-trimmy.png" className='ista-logo' alt="" />
+                        <img src="../ISTA_GROUP_LOGO-removebg-preview-trimmy.png" className='ista-logo' alt="" />
 
                         <div className='social-handles'>
-                            <a href="">
-                                <img src="Instagram-icon.svg" alt="" />
+                            <a href="https://www.instagram.com/ista__ceg/" target="_blank">
+                                <img src="../Instagram-icon.svg" alt="" />
                             </a>
-                            <a href="">
-                                <img src="email-icon.svg" class="email-logo" alt="" />
+                            <a href="mailto:auista.council@gmail.com" target="_blank">
+                                <img src="../email-icon.svg" class="email-logo" alt="" />
                             </a>
-                            <a href="">
-                                <img src="linkedin-icon.svg" alt="" />
+                            <a href="https://www.linkedin.com/company/ista-ceg/mycompany/" target="_blank">
+                                <img src="../linkedin-icon.svg" alt="" />
                             </a>
                         </div>
                     </div>
@@ -31,38 +31,38 @@ function Footer() {
                         
                         <div className='contact-person-div-row'>
                             <div className='contact-person-div'>
-                                <span className='position'>Head</span>
+                                <span className='position'>Chairman</span>
                                 <div>
-                                    <span>Person Name 1</span>
-                                    <span>1234567890</span>
+                                    <span>Akashram J</span>
+                                    <span>+91 7708477840</span>
                                 </div>
                             </div>
 
                             <div className='contact-person-div'>
-                                <span className='position'>Head</span>
+                                <span className='position'>Programming Head</span>
                                 <div>
-                                    <span>Person Name 1</span>
-                                    <span>1234567890</span>
+                                    <span>Praveen R</span>
+                                    <span>+91 9361352512</span>
                                 </div>
                             </div>
                         </div>
 
                         <div className='contact-person-div-row'>
                             <div className='contact-person-div'>
-                                <span className='position'>Head</span>
+                                <span className='position'>Overall Co-ordinator </span>
                                 <div>
-                                    <span>Person Name 1</span>
-                                    <span>1234567890</span>
+                                    <span>Ramya N</span>
+                                    <span>+91 9790463187</span>
                                 </div>
                             </div>
 
-                            <div className='contact-person-div'>
+                            {/* <div className='contact-person-div'>
                                 <span className='position'>Head</span>
                                 <div>
                                     <span>Person Name 1</span>
                                     <span>1234567890</span>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
 

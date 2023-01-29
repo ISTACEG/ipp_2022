@@ -24,12 +24,12 @@ div.about-div {
     div.about-wrapper {
         display: flex;
         justify-content: space-between;
-
+        flex-wrap: wrap;
 
         img.about-poster {
             display: block;
             height: pxe(336.68);
-            width: pxe(550);
+            max-width: pxe(550);
             border-radius: pxe(18.16);
             border: pxe(2.4) solid $tertiary-green;
             margin-top: pxe(40);
@@ -46,6 +46,7 @@ div.about-div {
             height: max-content;
             width: fit-content;
             z-index: 5;
+            margin-top: pxe(24);
 
             h1 {
                 text-align: center;
@@ -60,7 +61,7 @@ div.about-div {
             div.about-text-bg {
                 margin-top: pxe(32);
                 display: block;
-                width: pxe(620);
+                max-width: pxe(620);
                 text-align: start;
 
                 // transform: translateX(400%);
@@ -83,6 +84,100 @@ div.about-div {
     }
 
 
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+
+
+    div.about-div {
+        display: flex;
+        flex-direction: column;
+    
+        width: 100%;
+        background-color: $primary;
+        color: $white;
+        padding: pxe(114) 0;
+    
+    
+    
+        div.about-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+    
+            img.about-poster {
+                display: block;
+                height: pxe(336.68);
+                width: 100%;
+                border-radius: pxe(18.16);
+                object-fit: cover;
+                object-position: center;
+                border: pxe(2.4) solid $tertiary-green;
+                margin-top: pxe(40);
+    
+                z-index: 5;
+            }
+    
+    
+    
+    
+            div.about-text-div {
+                text-align: start;
+                display: block;
+                height: max-content;
+                width: fit-content;
+                z-index: 5;
+                margin-top: pxe(24);
+    
+                h1 {
+                    text-align: center;
+                    font-size: pxe(48);
+                    font-weight: 400;
+    
+                    // transform: translateX(200%);
+                    // transition: transform 2s;
+                }
+    
+    
+                div.about-text-bg {
+                    margin-top: pxe(32);
+                    display: block;
+                    max-width: pxe(620);
+                    text-align: start;
+    
+                    // transform: translateX(400%);
+                    // transition: transform 2s;
+        
+                    font-size: pxe(16);
+                    padding: pxe(24);
+                    font-weight: 400;
+                    line-height: pxe(32);
+        
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(pxe(41.5127));
+                    border-radius: pxe(18.1618);
+    
+                }
+    
+            }
+    
+    
+        }
+    
+    
+    
+    
+    }
+    
 
 
 }

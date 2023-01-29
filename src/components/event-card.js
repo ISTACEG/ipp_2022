@@ -11,7 +11,14 @@ function EventCard(props) {
     let navigate = useNavigate();
 
     const eventCardClick = (e) => {
-        navigate(`/details?eventid=${props.eventId}`)
+
+        if (props.type=="1") {
+            navigate(`/details/${'e'}?id=${props.eventId}`)
+        }
+        else {
+            navigate(`/details/${'nt'}?id=${props.eventId}`)
+        }
+
     }
 
 
@@ -20,33 +27,11 @@ function EventCard(props) {
             <img src={props.imgUrl} alt="" />
 
             <div className="info-grid">
-                <div className="info-item">
-                    <span>Name</span>
-                    <span className='info-item-name'>{props.name}</span>
-                </div>
-                <div className="info-item">
-                    <img src="Map Marker.svg" alt="" />
-                    <span className="info-item-location">{props.location}</span>
-                </div>
-                <div className="info-item">
-                    <span>Rounds</span>
-                    <span className="info-item-round">{props.rounds}</span>
-                </div>
-                <div className="info-item">
-                    <img src="Clock.svg" alt="" />
-                    <span className='info-item-time'>{props.time}</span>
-                </div>
-                <div className="info-item event-type">
-                    <span className='info-item-type'>{
-                        
-                        (props.type=="1")? <span>Tech Event</span>: <span>Non Tech Event</span>
+
+                <h2 className='event-heading'>{props.name}</h2>
+                <div><p>Prize</p> worth ₹{props.prize.winner + props.prize.runner}+</div>
+                <p>{(props.type=="1")? <span>Tech Event</span>: <span>Non Tech Event</span>}</p>
                 
-                    }</span>
-                </div>
-                <div className="info-item">
-                    <img src="Trophy.svg" alt="" />
-                    <span className="info-item-prize">{props.prize}</span>
-                </div>
             </div>
 
             <div className="edge-1"></div>

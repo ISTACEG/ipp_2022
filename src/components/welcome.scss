@@ -5,10 +5,13 @@
 div.welcome-div {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+
     // align-items: center;
 
     width: 100%;
     min-height: pxe(760);
+    height: max-content;
     background-color: $primary;
     padding: pxe(114) 0 0;
 
@@ -17,6 +20,8 @@ div.welcome-div {
     div.main-infor-container {
         margin: 0 0 pxe(36);
         display: flex;
+        flex-wrap: wrap;
+
         justify-content: space-between;
         z-index: 1;
         width: 100%;
@@ -25,6 +30,7 @@ div.welcome-div {
             display: block;
             color: $white;
             max-width: pxe(567);
+            margin-right: pxe(24);
     
             h1 {
                 font-size: pxe(48);
@@ -33,11 +39,18 @@ div.welcome-div {
             }
     
             p {
-                margin: pxe(48) 0 0;
+                margin: pxe(8) 0 0;
                 font-size: pxe(16);
                 font-weight: 400;
                 line-height: pxe(32);
                 text-align: left;
+            }
+
+            h2 {
+                font-size: pxe(32);
+                font-weight: 400;
+                text-align: start;
+                margin-top: pxe(32);
             }
     
         }
@@ -47,13 +60,14 @@ div.welcome-div {
             display: flex;
             flex-direction: column;
             align-items: center;
-    
+            margin-top: pxe(24);
+
             div.main-logo {
                 display: flex;
                 justify-content: center;
     
                 width: pxe(596.75);
-                height: pxe(300);
+                height: max-content;
                 
                 background: rgba(255, 255, 255, 0.15);
                 backdrop-filter: blur(pxe(41.5127));
@@ -63,8 +77,10 @@ div.welcome-div {
 
                 img {
                     display: block;
-                    height: pxe(295);
+                    height: max-content;
                     width: pxe(295);
+                    object-fit: cover;
+                    object-position: center;
                 }
             }
     
@@ -78,7 +94,118 @@ div.welcome-div {
     }
 
 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
     
+
+    div.welcome-div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    
+        // align-items: center;
+    
+        width: 100%;
+        // min-height: pxe(760);
+        background-color: $primary;
+        padding: pxe(114) 0 0;
+    
+
+    
+        div.main-infor-container {
+            margin: 0 0 pxe(36);
+            display: flex;
+            flex-direction: column;
+
+            z-index: 1;
+            width: 100%;
+            
+
+            div.main-info {
+                display: block;
+                color: $white;
+                width: 100%;
+                margin: pxe(24) 0;
+
+                order: 2;
+        
+                h1 {
+                    font-size: pxe(48);
+                    font-weight: 400;
+                    text-align: center;
+                }
+        
+                p {
+                    margin: pxe(48) 0 0;
+                    font-size: pxe(16);
+                    font-weight: 400;
+                    line-height: pxe(32);
+                    text-align: start;
+                }
+
+                h2 {
+                    margin-top: pxe(32);
+                }
+        
+            }
+        
+        
+            div.main-logo-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: pxe(24) 0;
+
+                order: 1;
+
+    
+                div.main-logo {
+                    display: flex;
+                    justify-content: center;
+        
+                    width: 100%;
+                    height: max-content;
+                    padding: pxe(16) 0;
+                    
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(pxe(41.5127));
+                    /* Note: backdrop-filter has minimal browser support */
+                    border-radius: pxe(18.1618);
+    
+    
+                    img {
+                        display: block;
+                        height: max-content;
+                        width: pxe(237);
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+    
+        
+            }
+        
+        }
+    
+    
+    
+    }   
+
 
 
     

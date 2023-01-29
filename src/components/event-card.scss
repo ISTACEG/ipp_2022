@@ -11,11 +11,14 @@ div.event-card {
     // justify-content: center;
 
     height: pxe(216);
-    width: pxe(832);
-    background-color: $white;
+    width: pxe(832/2+50);
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(pxe(41.5127));
+    /* Note: backdrop-filter has minimal browser support */
     border-radius: pxe(18.16);
-    margin-bottom: pxe(42);
-    padding: 0 pxe(10);
+    margin: pxe(24);
+    padding: 0 pxe(24);
     position: relative;
     cursor: pointer;
     z-index: 3;
@@ -29,7 +32,7 @@ div.event-card {
         background-size: 200% 200%;
 
         height: 75%;
-        width: pxe(16);
+        width: pxe(12);
         position: absolute;
         right: 0;
         border-radius: pxe(18.16) 0 0 pxe(18.16);
@@ -47,7 +50,7 @@ div.event-card {
         background-size: 200% 200%;
 
         height: 75%;
-        width: pxe(16);
+        width: pxe(12);
         position: absolute;
         left: 0;
         border-radius: 0 pxe(18.16) pxe(18.16) 0;
@@ -63,78 +66,239 @@ div.event-card {
 
     img {
         display: block;
-        height: pxe(196);
+        height: max-content;
         width: pxe(196);
         border-radius: pxe(18.16);
+        object-fit: contain;
+        object-position: center;
     }
 
     div.info-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-items: center;
         justify-content: center;
+        padding: pxe(32) pxe(16);
         width: 100%;
         height: 100%;
+        color: $white;
 
-
-        div.info-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60%;
-            width: 80%;
-            border-bottom: pxe(2.4) solid $black;
-            
-            img {
-                display: block;
-                height: pxe(24);
-                width: pxe(24);
-                object-fit: cover;
-                object-position: center;
-            }
-
-
-            span {
-                font-size: pxe(24);
-                font-weight: 400;
-            }
-
-            
-
-
-
-            span.info-item-name {
-                justify-self: start;
-            }
-
+        h2.event-heading {
+            display: block;
+            width: 100%;
+            padding: 0 pxe(8);
+            font-size: pxe(24); 
+            margin-bottom: pxe(24);
         }
 
-
-        div.event-type {
+        div {
+            font-size: pxe(18);
+            width: max-content;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60%;
-            width: 80%;
-            border-bottom: pxe(2.4) solid $black;
+            margin: pxe(8) 0;
 
-
-            span {
-                font-size: pxe(24);
-                font-weight: 400;
+            p {
+                font-weight: 700;
+                margin: 0 pxe(8);
             }
-
         }
 
-
+        p {
+            font-size: pxe(18);
+        }
 
     }
 
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+    div.event-card {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        // min-height: pxe(300);
+        // min-width:  pxe(300);
+        height: max-content;
+        width: 100%;
+
+
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(pxe(41.5127));
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: pxe(18.16);
+        margin-bottom: pxe(42);
+        padding: pxe(16);
+        position: relative;
+        cursor: pointer;
+        z-index: 3;
+        overflow: hidden;
+
+
+
+        div.edge-1 {
+            display: block;
+            background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+            background-size: 200% 200%;
+
+            height: 80%;
+            width: pxe(8);
+            position: absolute;
+            right: 0;
+            margin-top: 5%;
+            border-radius: pxe(18.16) 0 0 pxe(18.16);
+
+
+            animation-name: event-card-edge-anime;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        div.edge-2 {
+            display: block;
+            background: linear-gradient( $tertiary-blue, $tertiary-green, $tertiary-green, $tertiary-blue);
+            background-size: 200% 200%;
+
+            height: 80%;
+            width: pxe(8);
+            position: absolute;
+            left: 0;
+            margin-top: 5%;
+            border-radius: 0 pxe(18.16) pxe(18.16) 0;
+
+
+            animation-name: event-card-edge-anime;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+
+        img {
+            display: block;
+            height: max-content;
+            width: 100%;
+            border-radius: pxe(18.16);
+            object-fit: contain;
+            object-position: center;
+        }
+
+        div.info-grid {
+            // display: grid;
+            // grid-template-columns: repeat(2, 1fr);
+            // grid-template-rows: repeat(3, 1fr);
+            // align-items: center;
+            // justify-items: center;
+            // justify-content: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+            // padding: pxe(16);
+            padding: 8px;
+
+
+            div.info-item {
+                display: none;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                border-bottom: pxe(2.4) solid $black;
+                margin-top: 8px;
+                
+                img {
+                    display: block;
+                    height: pxe(24);
+                    width: pxe(24);
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                span {
+                    font-size: pxe(24);
+                    font-weight: 400;
+                }
+                
+
+                span.info-item-name {
+                    justify-self: start;
+                }
+
+            }
+
+
+
+            div.name-info-item {
+                display: flex;
+                justify-content: center;
+                border-bottom: none;
+
+                
+                span.info-item-name-attr {
+                    display: none;
+                }
+            }
+
+
+            div.event-type {
+                display: none;
+                align-items: center;
+                justify-content: end;
+                height: 100%;
+                width: 100%;
+                border-bottom: pxe(2.4) solid $black;
+
+
+                span {
+                    font-size: pxe(24);
+                    font-weight: 400;
+                }
+
+            }
+
+
+
+        }
+
+
+    }
+
+
+
+
+}
 
 
 @keyframes event-card-edge-anime {

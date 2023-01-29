@@ -4,70 +4,264 @@
 
 
 
-Nav.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: pxe(100);
-
-
-    position: fixed;
-    top: 0;
-    z-index: 10000;
-
-    background-color: rgba($primary, 0.9);
-
-    color: $white;
-
-    div.nav-container {
+@media screen and (min-width: 600px) {
+    
+    Nav.navbar {
         display: flex;
         align-items: center;
-        width: 85%;
-        min-height: inherit;
-        
+        justify-content: center;
+        width: 100%;
+        height: pxe(100);
+    
 
+        position: fixed;
+        top: 0;
+        z-index: 10000;
+
+        background-color: rgba($primary, 0.97);
+
+        color: $white;
+        
+        
         div.nav-logo {
             font-size: pxe(36);
             font-weight: 700;
-            margin-right: auto;
+            
+            margin: 0 pxe(16);
         }
-    
-        a {
-            font-size: pxe(16);
-            font-weight: 600;
-            color: $white;
-            margin: 0 pxe(20) 0;
-        }
-    
-        a div {
-            background-color: $white;
+
+        
+
+
+
+
+
+        div.nav-container {
             display: flex;
             align-items: center;
-            justify-content: center;
-            border-radius: pxe(1000);
-            height: pxe(40);
-            width:  pxe(146);
-            color: $primary;
+            justify-content: end;
+            width: 85%;
+            min-height: inherit;
+    
+        
+            div.menu-btn {
+                display: none;
+            }
+
+
+            div.link-wrapper {
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-size: pxe(16);
+                    font-weight: 600;
+                    color: $white;
+                    margin: 0 pxe(20) 0;
+                }
+            
+                a div {
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: pxe(1000);
+                    height: pxe(40);
+                    width:  pxe(146);
+                    color: $primary;
+                }
+            }
+            
         }
+
+        
+        .active {
+            padding: pxe(16) pxe(16) pxe(12);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: pxe(4);
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background-image: linear-gradient(to right, $tertiary-green, $tertiary-blue);
+                border-radius: pxe(5000);
+            }
+        }
+
     }
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+    
+
+
+    Nav.navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        background-color: rgba($primary, 0.97);
+        color: $white;
+        
+        
+        div.logo-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: pxe(16);
+
+
+            div.nav-logo {
+                font-size: pxe(36);
+                font-weight: 700;
+            }
+
+            div.menu-btn-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 48px;
+                width: 48px;
+
+                div.menu-btn {
+                    display: flex;
+                    height: 6px;
+                    width: 48px;
+                    background-color: $white;
+                    position: relative;
+                    border-radius: 5000px;
+    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: block;
+                        width: 48px;
+                        height: 6px;
+                        background-color: $white;
+                
+                        margin-top: -12px;
+                        border-radius: 5000px;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+
+                        right: 0;
+                        top: 0;
+                        margin-top: 12px;
+                
+                        width: 48px;
+                        height: 6px;
+                        background-color: $white;
+                        border-radius: 5000px;
+                    }
+                
+                }
+
+                div.menu-btn.open {
+        
+                    background-color: transparent;
+
+        
+                    &::before {    
+                        transform: rotate(-45deg);
+                        margin-top: 0;
+                            
+                        transition: transform 0.5s ease;
+                    }
+
+                    &::after {    
+                        transform: rotate(45deg);
+                        margin-top: 0;
+                        
+                        transition: transform 0.5s ease;
+                    }
+                        
+        
+                }
+            }
+
+            
+        }
+        
+        
 
     
-    .active {
-        padding: pxe(16) pxe(16) pxe(12);
-        position: relative;
 
-        &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            height: pxe(4);
+        div.nav-container {
+            display: flex;
+            flex-direction: column;
             width: 100%;
-            bottom: 0;
-            left: 0;
-            background-image: linear-gradient(to right, $tertiary-green, $tertiary-blue);
-            border-radius: pxe(5000);
-        }
-    }
+            position: relative;
+            height: max-content;
+                
 
+            
+
+           
+
+        
+            div.link-wrapper.open {
+                max-height: 500px;
+                transition: max-height 1s ease;
+            }
+
+
+            div.link-wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                padding-bottom: pxe(16);
+
+                a {
+                    font-size: pxe(16);
+                    font-weight: 600;
+                    color: $white;
+                    margin: pxe(20);
+                }
+            
+                a div {
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: pxe(1000);
+                    height: pxe(40);
+                    width:  pxe(146);
+                    color: $primary;
+                }
+            }
+            
+        }
+
+        
+
+    }
+}
+
+
+
+@keyframes open-animation {
+    100% {
+        height: max-content;
+    }
 }

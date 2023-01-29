@@ -2,9 +2,16 @@
 
 
 
+// $v-w : 50;
+// $v-h : 100;
+// $clc-height : 760;
+
+
+
 $v-w : 50;
 $v-h : 100;
 $clc-height : 760;
+$k: 1;
 
 
 
@@ -13,11 +20,19 @@ $clc-height : 760;
 }
 
 
-// @function pxe( $p-x ) {
-//     $zoom-adjust-value: 1rem;
-//     $global_height: calc(min(#{$v-w}vw, #{$v-h}vh));
+@function pxe-2( $p-x ) {    
+    $zoom-adjust-value: 1rem;
+    $global_height: calc(min(#{$v-w}vw, #{$v-h}vh));
     
-//     @return calc((#{$global_height} * (#{$p-x/16})) / (#{$clc-height/16}));
+    @return calc(((#{$global_height} * (#{$p-x/16})) / (#{$clc-height/16})) * $k);
+}
+
+
+// @function pxe( $p-x ) {
+    // $zoom-adjust-value: 1rem;
+    // $global_height: calc(min(#{$v-w}vw, #{$v-h}vh));
+    
+    // @return calc(((#{$global_height} * (#{$p-x/16})) / (#{$clc-height/16})) * $k);
 // }
 
 

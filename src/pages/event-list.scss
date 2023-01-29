@@ -9,6 +9,7 @@ div.event-List {
     flex-direction: column;
     align-items: center;
     min-height: pxe(760);
+    width: 100%;
     background-color: $primary;
     position: relative;
 
@@ -23,13 +24,7 @@ div.event-List {
         max-width: pxe(1519);
         padding: pxe(114) pxe(130) pxe(114);
 
-        h1 {
-            font-size: pxe(48);
-            font-weight: 400;
-            color: $white;
-            margin-bottom: pxe(48);
-            z-index: 1;
-        }
+        
 
         [class $= -bg-circle] {
             display: flex;
@@ -77,4 +72,77 @@ div.event-List {
 
 
 
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+div.event-List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: pxe(760);
+    background-color: $primary;
+    position: relative;
+
+
+    div.sections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding: pxe(114) pxe(32);
+
+
+        [class $= -bg-circle] {
+            display: flex;
+            height: pxe(1293);
+            width: pxe(1293);
+            background-color: $secondary;
+            border-radius: 50%;
+            position: absolute;
+        }
+    
+    
+        div.a-bg-circle {
+            position: absolute;
+            right: pxe(-583);
+            top: pxe(-624);
+            z-index: 0;
+        }
+    
+        div.b-bg-circle {
+            position: absolute;
+            height: pxe(1000);
+            width: pxe(1000);
+            left: pxe(-614);
+            top: pxe(754);        
+            z-index: 0;
+        }
+    
+        div.c-bg-circle {
+            position: absolute;
+            right: pxe(-680);
+            top: pxe(1792);        
+            z-index: 0;
+        }
+
+
+        div.d-bg-circle {
+            position: absolute;
+            top: pxe(3833);
+            left: pxe(-528);       
+            z-index: 0;
+        }
+    }
+
+
+
+
+
+}
 }

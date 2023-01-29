@@ -14,11 +14,11 @@ const SponsorCaraousal = (props) => {
 
 
     const mousenterfunc = (e) => {
-        elemRef.current.style.animationPlayState = 'paused';
+        // elemRef.current.style.animationPlayState = 'paused';
     }
     
     const mouseleavefunc = (e) => {
-        elemRef.current.style.animationPlayState = 'running';
+        // elemRef.current.style.animationPlayState = 'running';
     }
 
     
@@ -43,7 +43,10 @@ const SponsorCaraousal = (props) => {
                         <div className='ImgList' key={i}>
                             {sponsorsList.map((sponsor, index) => {
                                 return (
-                                    <img className='ImgListItem' src={sponsor.sponsorLogo} alt={sponsor.sponsorName+" logo"} />
+                                    <div className="sponsor-img-wrapper">
+                                        <img className='ImgListItem' src={sponsor.sponsorLogo} alt={sponsor.sponsorName+" logo"} />
+                                        <h3>{sponsor.type}</h3>
+                                    </div>
                                 )
                             })}
 

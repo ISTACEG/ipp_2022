@@ -34,9 +34,9 @@ footer {
 
             img.ista-logo {
                 display: block;
-                height: pxe(119);
+                height: max-content;
                 width: pxe(263);
-                object-fit: cover;
+                object-fit: contain;
                 object-position: center;
             }
 
@@ -49,7 +49,7 @@ footer {
 
                 img {    
                     display: block;
-                    height: pxe(32);
+                    height: max-content;
                     width: pxe(32);
                     object-fit: cover;
                     object-position: center;
@@ -57,9 +57,9 @@ footer {
 
                 img.email-logo {
                     display: block;
-                    height: pxe(32);
+                    height: max-content;
                     width: pxe(45);
-                    object-fit: cover;
+                    object-fit: contain;
                     object-position: center;
 
                 }
@@ -91,7 +91,8 @@ footer {
 
             div.contact-person-div-row {
                 display: flex;
-
+                margin-top: pxe(8);
+                justify-content: start;
 
                 div.contact-person-div {
                     margin: pxe(12) pxe(12) 0 0;
@@ -100,7 +101,8 @@ footer {
 
                     span.position {
                         display: flex;
-                        font-size: pxe(18);
+                        font-size: pxe(16);
+                        font-weight: 700;
                     }
     
                     div {
@@ -132,4 +134,158 @@ footer {
         font-size: pxe(16);
         color: $white;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: $black;
+        padding: pxe(16) pxe(32);
+        height: max-content;
+    
+    
+        div.footer-div {
+            display: flex;
+            // justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+    
+            width: 100%;
+            height: max-content;
+            background-color: $black;
+            margin: pxe(16) 0;
+    
+    
+    
+            div.social-div {
+                display: flex;
+                flex-direction: column;
+                height: max-content;
+                width: 100%;
+
+                order: 2;
+
+                margin-top: pxe(48);
+                padding: 0 pxe(16);
+    
+                img.ista-logo {
+                    display: block;
+                    height: max-content;
+                    width: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+    
+    
+                div.social-handles {
+                    display: flex;
+                    margin: pxe(16) 0 0;
+                    width: 100%;
+                    justify-content: space-between;
+    
+                    img {    
+                        display: block;
+                        height: max-content;
+                        width: pxe(32);
+                        object-fit: contain;
+                        object-position: center;
+                    }
+    
+                    img.email-logo {
+                        display: block;
+                        height: max-content;
+                        width: pxe(45);
+                        object-fit: contain;
+                        object-position: center;
+    
+                    }
+                }
+    
+            }
+    
+    
+            div.contact-div {
+                
+                order: 1;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+    
+                width: 100%;
+                color: $white;
+                height: max-content;
+    
+                span.contact-title {
+                    font-size: pxe(32);
+                    font-weight: 400;
+                }
+    
+    
+                div.contact-person-div-row {
+                    display: flex;
+                    flex-direction: column;
+                    height: max-content;
+                    width: 100%;
+
+
+                    div.contact-person-div {
+                        display: flex;
+                        flex-direction: column;
+    
+                        span.position {
+                            display: flex;
+                            font-size: pxe(18);
+                        }
+        
+                        div {
+                            margin-top: pxe(4);
+                            display: flex;
+    
+                            span {
+                                display: flex;
+                                font-size: pxe(16);
+                                margin: 0 pxe(16) 0 0;
+                            }
+                        }
+        
+                    }
+                }
+                
+    
+    
+
+            }
+            
+        }
+    
+    
+    
+        span.copyright {
+            margin: pxe(48) 0 pxe(24);
+            font-size: pxe(16);
+            color: $white;
+        }
+    }
+
+
 }

@@ -7,13 +7,19 @@
 
 div.sponsorCaraousal-container {
     display: block;
-    width: pxe(1173);
+    max-width: pxe(1173);
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(pxe(41.5127));
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: pxe(18.1618);
+    margin-top: pxe(8);
+    cursor: pointer;
 
 
     div.container {
         overflow: hidden;
-        min-width: 100%;
+        width: 100%;
         animation-play-state: running;
         position: relative;   
     }
@@ -21,10 +27,10 @@ div.sponsorCaraousal-container {
     div.LeftEndDiv {
         display: flex;
         height: 100%;
-        width: pxe(150);
+        width: pxe(50);
         z-index: 500;
         background-image: linear-gradient(to right, $primary, $primary, transparent);
-        position: 'absolute';
+        position: absolute;
         left: 0;
         top: 0;
     }
@@ -32,7 +38,7 @@ div.sponsorCaraousal-container {
     div.RightEndDiv {
         display: flex;
         height: 100%;
-        width: pxe(150);
+        width: pxe(50);
         z-index: 500;
         background-image: linear-gradient(to right, transparent, $primary, $primary);
         position: absolute;
@@ -64,14 +70,26 @@ div.sponsorCaraousal-container {
             animation-fill-mode: forwards;
             animation-play-state: inherit;
 
+            div.sponsor-img-wrapper {
+                padding: pxe(16) 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
 
-            img.ImgListItem {
-                height: pxe(93);
-                min-width: pxe(226);
-                object-fit: cover;
-                object-position: center;
-                margin-right: pxe(36);
+                img.ImgListItem {
+                    height: pxe(150);
+                    min-width: pxe(226);
+                    object-fit: contain;
+                    object-position: center;
+                    margin-right: pxe(36);
+                }
+
+                h3 {
+                    text-align: center;
+                }
             }
+            
         }
     }
 
@@ -81,6 +99,142 @@ div.sponsorCaraousal-container {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+
+    div.sponsorCaraousal-container {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    
+    
+        div.container {
+            overflow: hidden;
+            min-width: 100%;
+            animation-play-state: running;
+            position: relative;  
+            z-index: 300; 
+        }
+    
+        div.LeftEndDiv {
+            display: flex;
+            height: 100%;
+            width: pxe(100);
+            z-index: 500;
+            background-image: linear-gradient(to right, $primary, $primary, transparent);
+            position: absolute;
+            left: pxe(-42);
+            top: 0;
+        }
+    
+        div.RightEndDiv {
+            display: flex;
+            height: 100%;
+            width: pxe(100);
+            z-index: 500;
+            background-image: linear-gradient(to right, transparent, $primary, $primary);
+            position: absolute;
+            right: pxe(-42);
+            top: 0;
+        }
+    
+    
+    
+    
+    
+        div.SponsorCarousel {
+            display: flex;
+            width: fit-content;
+            animation-play-state: inherit;
+    
+    
+            div.ImgList {
+                display: flex;
+                width: 100%;
+                column-gap: pxe(10);
+                padding-right: pxe(10);
+    
+                animation-name: running-carousel;
+                animation-duration: 40s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: reverse;
+                animation-fill-mode: forwards;
+                animation-play-state: inherit;
+    
+    
+                div.sponsor-img-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: max-content;
+
+                    img.ImgListItem {
+                        height: max-content;
+                        width: pxe(226);
+                        object-fit: cover;
+                        object-position: center;
+                        margin-right: pxe(36);
+                    }
+
+                    
+                    h3 {
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    
+    
+    
+    }
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
