@@ -226,7 +226,7 @@ div.event-card {
 
             width: 100%;
             // padding: pxe(16);
-            padding: 8px;
+            padding: pxe(8);
 
 
             div.info-item {
@@ -236,7 +236,7 @@ div.event-card {
                 height: 100%;
                 width: 100%;
                 border-bottom: pxe(2.4) solid $black;
-                margin-top: 8px;
+                margin-top: pxe(8);
                 
                 img {
                     display: block;

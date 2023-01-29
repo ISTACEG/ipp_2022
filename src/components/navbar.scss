@@ -133,16 +133,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 48px;
-                width: 48px;
+                height: pxe(48);
+                width: pxe(48);
 
                 div.menu-btn {
                     display: flex;
-                    height: 6px;
-                    width: 48px;
+                    height: pxe(6);
+                    width: pxe(48);
                     background-color: $white;
                     position: relative;
-                    border-radius: 5000px;
+                    border-radius: pxe(5000);
     
                     &::before {
                         content: "";
@@ -150,12 +150,12 @@
                         right: 0;
                         top: 0;
                         display: block;
-                        width: 48px;
-                        height: 6px;
+                        width: pxe(48);
+                        height: pxe(6);
                         background-color: $white;
                 
-                        margin-top: -12px;
-                        border-radius: 5000px;
+                        margin-top: pxe(-12);
+                        border-radius: pxe(5000);
                     }
                     &::after {
                         content: "";
@@ -164,12 +164,12 @@
 
                         right: 0;
                         top: 0;
-                        margin-top: 12px;
+                        margin-top: pxe(12);
                 
-                        width: 48px;
-                        height: 6px;
+                        width: pxe(48);
+                        height: pxe(6);
                         background-color: $white;
-                        border-radius: 5000px;
+                        border-radius: pxe(5000);
                     }
                 
                 }
@@ -218,7 +218,7 @@
 
         
             div.link-wrapper.open {
-                max-height: 500px;
+                max-height: pxe(500);
                 transition: max-height 1s ease;
             }
 
