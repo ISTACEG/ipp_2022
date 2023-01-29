@@ -27,7 +27,7 @@ function Welcome() {
 
                 <div className='main-logo-container'>
                     <div className='main-logo'>
-                        <img src={process.env.PUBLIC_URL + "/posters/i++22_white_1.png"} alt="" />
+                        <img src={process.env.PUBLIC_URL + "/posters/ipp_22_white_1.png"} alt="" />
                     </div>
 
 
