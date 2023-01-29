@@ -48,7 +48,7 @@ function About() {
     return (
         <div className="about-div" ref={about_div_ref}>
             <div className="about-wrapper">
-                <img src="2650401.jpg" alt="" className="about-poster" />
+                <img src={process.env.PUBLIC_URL + "/about_bg.jpg"} alt="" className="about-poster" />
 
                 <div className="about-text-div">
                     <h1 ref={about_text_h_div_ref}>About us</h1>

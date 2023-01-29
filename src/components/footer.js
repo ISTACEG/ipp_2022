@@ -10,7 +10,7 @@ function Footer() {
                 <div className="footer-div">
 
                     <div className="social-div">
-                        <img src="../ISTA_GROUP_LOGO-removebg-preview-trimmy.png" className='ista-logo' alt="" />
+                        <img src={process.env.PUBLIC_URL+"/ISTA_logo.png"} className='ista-logo' alt="" />
 
                         <div className='social-handles'>
                             <a href="https://www.instagram.com/ista__ceg/" target="_blank">

@@ -3,7 +3,7 @@ var workshopData = [
     {
         eventName: "AWS Workshop",
         eventType: "4",
-        eventImgUrl: "./posters/aws workshop.jpeg",
+        eventImgUrl: "./posters/aws_workshop.jpeg",
         date: Date.parse("02 Feb 2023"),
         location: "Ada Lovelace Auditorium - IT Department",
         rounds: [
@@ -98,7 +98,7 @@ var nontechEventsListData = [
     {
         eventName: "Connections",
         eventType: "2",
-        eventImgUrl: "./posters/connections poster.jpg",
+        eventImgUrl: "./posters/connections_poster.jpg",
         date: Date.parse("03 Feb 2023"),
         location: "IT Department Laboratory",
         rounds: [
@@ -143,7 +143,7 @@ var nontechEventsListData = [
     {
         eventName: "Treasure Hunt",
         eventType: "2",
-        eventImgUrl: "./posters/treasureHunt poster.jpg",
+        eventImgUrl: "./posters/treasureHunt_poster.jpg",
         date: Date.parse("03 Feb 2023"),
         location: "IT Department Laboratory",
         rounds: [
@@ -226,7 +226,7 @@ var eventListData= [
         {
             eventName: "OSPC",
             eventType: "1",
-            eventImgUrl: "./posters/ospc poster.jpg",
+            eventImgUrl: "./posters/ospc_poster.jpg",
             date: Date.parse("03 Feb 2023"),
             location: "Online",
             rounds: [
@@ -272,7 +272,7 @@ var eventListData= [
         {
             eventName: "Escape Room",
             eventType: "1",
-            eventImgUrl: "./posters/escape room.jpg",
+            eventImgUrl: "./posters/escape_room.jpg",
             date: Date.parse("03 Feb 2023"),
             location: "IT Department Laboratory",
             rounds: [
@@ -319,7 +319,7 @@ var eventListData= [
         {
             eventName: "CODE-DECODE",
             eventType: "1",
-            eventImgUrl: "./posters/code decode poster.jpeg",
+            eventImgUrl: "./posters/code_decode_poster.jpeg",
             date: Date.parse("03 Feb 2023"),
             location: "IT Department Laboratory",
             rounds: [
@@ -363,7 +363,7 @@ var eventListData= [
         {
             eventName: "App Dev",
             eventType: "1",
-            eventImgUrl: "./posters/Appdev poster.png",
+            eventImgUrl: "./posters/Appdev_poster.png",
             date: Date.parse("03 Feb 2023"),
             location: "IT Department Laboratory",
             rounds: [
@@ -408,7 +408,7 @@ var eventListData= [
         {
             eventName: "Shark Tank",
             eventType: "1",
-            eventImgUrl: "./posters/sharktank poster.jpeg",
+            eventImgUrl: "./posters/sharktank_poster.jpeg",
             date: Date.parse("03 Feb 2023"),
             location: "IT Department Laboratory",
             rounds: [
@@ -521,7 +521,7 @@ var sponsorsList = [
     {
         sponsorName: "KBX Digital",
         // sponsorLogo: "https://images.unsplash.com/photo-1668027686570-aff6795ed3c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        sponsorLogo: "./posters/KBX Logo.png",
+        sponsorLogo: "./posters/KBX_Logo.png",
         type: "Workshop Partner"
     },
     {
