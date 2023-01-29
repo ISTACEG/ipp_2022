@@ -14,11 +14,11 @@ const SponsorCaraousal = (props) => {
 
 
     const mousenterfunc = (e) => {
-        // elemRef.current.style.animationPlayState = 'paused';
+        elemRef.current.style.animationPlayState = 'paused';
     }
     
     const mouseleavefunc = (e) => {
-        // elemRef.current.style.animationPlayState = 'running';
+        elemRef.current.style.animationPlayState = 'running';
     }
 
     
