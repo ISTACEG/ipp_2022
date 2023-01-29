@@ -135,7 +135,7 @@ div.sponsorCaraousal-container {
         div.LeftEndDiv {
             display: flex;
             height: 100%;
-            width: pxe(100);
+            width: pxe(50);
             z-index: 500;
             background-image: linear-gradient(to right, $primary, $primary, transparent);
             position: absolute;
@@ -146,7 +146,7 @@ div.sponsorCaraousal-container {
         div.RightEndDiv {
             display: flex;
             height: 100%;
-            width: pxe(100);
+            width: pxe(50);
             z-index: 500;
             background-image: linear-gradient(to right, transparent, $primary, $primary);
             position: absolute;
