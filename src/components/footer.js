@@ -10,17 +10,17 @@ function Footer() {
                 <div className="footer-div">
 
                     <div className="social-div">
-                        <img src="../ISTA_GROUP_LOGO-removebg-preview-trimmy.png" className='ista-logo' alt="" />
+                        <img src="%PUBLIC_URL%/ISTA_GROUP_LOGO-removebg-preview-trimmy.png" className='ista-logo' alt="" />
 
                         <div className='social-handles'>
                             <a href="https://www.instagram.com/ista__ceg/" target="_blank">
-                                <img src="../Instagram-icon.svg" alt="" />
+                                <img src="%PUBLIC_URL%/Instagram-icon.svg" alt="" />
                             </a>
                             <a href="mailto:auista.council@gmail.com" target="_blank">
-                                <img src="../email-icon.svg" class="email-logo" alt="" />
+                                <img src="%PUBLIC_URL%/email-icon.svg" class="email-logo" alt="" />
                             </a>
                             <a href="https://www.linkedin.com/company/ista-ceg/mycompany/" target="_blank">
-                                <img src="../linkedin-icon.svg" alt="" />
+                                <img src="%PUBLIC_URL%/linkedin-icon.svg" alt="" />
                             </a>
                         </div>
                     </div>

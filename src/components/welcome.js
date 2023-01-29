@@ -29,7 +29,7 @@ function Welcome() {
 
                 <div className='main-logo-container'>
                     <div className='main-logo'>
-                        <img src="./posters/i++22 white 1.png" alt="" />
+                        <img src="%PUBLIC_URL%/posters/i++22 white 1.png" alt="" />
                     </div>
 
 

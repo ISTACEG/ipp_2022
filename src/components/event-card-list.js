@@ -29,7 +29,7 @@ function EventCardList() {
                 {workshopData.map((item, index) => (
 
                     <div className="workshop-card">
-                        <img src={item.eventImgUrl} alt="" />
+                        <img src={`%PUBLIC_URL%/${item.eventImgUrl}`} alt="" />
 
                         <div className="info-grid">
 
@@ -62,7 +62,7 @@ function EventCardList() {
                     {hackathonData.map((item, index) => (
 
                         <div className="workshop-card">
-                            <img src={item.eventImgUrl} alt="" />
+                            <img src={`%PUBLIC_URL%/${item.eventImgUrl}`} alt="" />
 
                             <div className="info-grid">
 

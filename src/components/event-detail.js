@@ -49,7 +49,7 @@ function EventDetail() {
                     
 
                     <div className="img-bg">
-                        <img className='eventposter' src={"../"+eventData.eventImgUrl} alt="" />
+                        <img className='eventposter' src={"%PUBLIC_URL%/"+eventData.eventImgUrl} alt="" />
                     </div> 
 
                     {
