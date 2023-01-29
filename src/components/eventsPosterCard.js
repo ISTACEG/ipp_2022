@@ -10,7 +10,7 @@ function EventsPosterCard(props) {
     return (
         <div className="eventsPosterCard">
             <span className="header">{props.header}</span>
-            <img src={`%PUBLIC_URL%/${props.imageUrl}`} alt="" />
+            <img src={props.imageUrl} alt="" />
 
             <div className="hashtag">
                 {

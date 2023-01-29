@@ -24,7 +24,7 @@ function EventCard(props) {
 
     return (
         <div onClick={eventCardClick} className="event-card">
-            <img src={`%PUBLIC_URL%/${props.imgUrl}`} alt="" />
+            <img src={props.imgUrl} alt="" />
 
             <div className="info-grid">
 
