@@ -100,7 +100,7 @@ var nontechEventsListData = [
         eventType: "2",
         eventImgUrl: "./posters/connections_poster.jpg",
         date: Date.parse("03 Feb 2023"),
-        location: "IT Department Laboratory",
+        location: "IT Department Ground floor room",
         rounds: [
             {
                 time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -146,7 +146,7 @@ var nontechEventsListData = [
         eventType: "2",
         eventImgUrl: "./posters/treasureHunt_poster.jpg",
         date: Date.parse("03 Feb 2023"),
-        location: "IT Department Laboratory",
+        location: "Registration Desk",
         rounds: [
             {
                 time: Date.parse("03 Feb 2023 10:00:00 AM"),
@@ -236,7 +236,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/ospc_poster.jpg",
             date: Date.parse("03 Feb 2023"),
-            location: "Online",
+            location: "IT Department Lab",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -408,7 +408,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/sharktank_poster.jpeg",
             date: Date.parse("03 Feb 2023"),
-            location: "IT Department Laboratory",
+            location: "IT Department Conference Hall",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
