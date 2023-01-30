@@ -40,7 +40,16 @@ function EventDetail() {
                     }
                 
 
-                    
+                    {
+                        (eventData.benefits != null && eventData.benefits.length > 0) &&
+                        <div className="event-info-bg">
+                            <div className="event-info-item">
+                                <span className='h-span'>Benefits</span>
+                                <span>{eventData.benefits}</span>
+                            </div>             
+                        </div>
+                        
+                    }
                 </div>
 
 
@@ -111,16 +120,7 @@ function EventDetail() {
                         </div>
                     </div>
 
-                    {
-                        (eventData.benefits != null && eventData.benefits.length > 0) &&
-                        <div className="event-info-bg">
-                            <div className="event-info-item">
-                                <span className='h-span'>Benefits</span>
-                                <span>{eventData.benefits}</span>
-                            </div>             
-                        </div>
-                        
-                    }
+                    
 
                 </div>
             </div>

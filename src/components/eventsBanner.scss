@@ -323,6 +323,7 @@
             div.events-banner-poster {
                 display: flex;
                 justify-content: space-between;
+                flex-direction: column;
 
 
                 flex-wrap: wrap;
@@ -333,9 +334,9 @@
                 padding: pxe(8) 0;
 
                 margin-top: pxe(24);
-                height: max-content;
+                // height: pxe(258);
                 width: 100%;
-                overflow: hidden;
+                overflow-x: hidden;
                 position: relative;
 
 
@@ -362,7 +363,7 @@
 
                 
                 [class ^= EventsPosterCard-list-] {
-                    margin: pxe(8);
+                    margin: pxe(4) pxe(4) 0;
                     display: flex;
                     
 

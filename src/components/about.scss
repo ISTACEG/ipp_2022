@@ -107,7 +107,7 @@ div.about-div {
         width: 100%;
         background-color: $primary;
         color: $white;
-        padding: pxe(114) 0;
+        padding: 0 0 pxe(36);
     
     
     
@@ -139,6 +139,7 @@ div.about-div {
                 width: fit-content;
                 z-index: 5;
                 margin-top: pxe(24);
+                padding: 0;
     
                 h1 {
                     text-align: center;

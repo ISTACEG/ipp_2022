@@ -35,12 +35,10 @@
             width: 100%;
             max-width: 90%;
             flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
 
             div.container-1 {
                 height: max-content;
-                // width: 100%;
+                width: 50%;
                 padding: pxe(24);
 
                 display: flex;
@@ -67,11 +65,90 @@
             }
         
             
-        
+            div {
+                
+                div.event-info-bg {
+                    margin: pxe(36) 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    
+
+                    background: rgba(255, 255, 255, 0.18);
+                    backdrop-filter: blur(pxe(41.5127));
+            
+                    border-radius: pxe(18.1618);
+                    padding: pxe(16);
+                    position: relative;
+                    overflow: hidden;
+
+
+            
+                    div.event-info-item {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        padding-bottom: pxe(8);
+                        border-bottom: pxe(2) solid $white;
+                        margin: pxe(14) 0;
+                        text-align: end;
+                        color: $white;
+            
+                        span {
+                            display: inline-block;
+                            padding: 0 0 0 pxe(16);
+                            font-size: pxe(16);
+                            font-weight: 400;
+                            color: $white;
+                            text-align: end;
+                        }
+
+                        div {
+                            display: flex;
+                            color: $white;
+                            flex-direction: column;
+                            
+                            text-align: end;
+                        }
+
+            
+                        span.h-span {
+                            font-weight: 700;
+                            padding: 0 pxe(16) 0 0;
+                            text-align: end;
+                        }
+                    }
+
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -50%;
+                        bottom: 0;
+                        right: 0;
+                        border-radius: pxe(18.16);
+                        background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                        display: block;
+                        height: 200%;
+                        width: pxe(100);
+                
+                
+                
+                        animation-name: register-glowbg;
+                        animation-duration: 6s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                
+                    }
+                }   
+            }
         
         
             div.container-2 {
-                width: 100%;
+                width: 50%;
+                max-width: pxe(400);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -83,14 +160,16 @@
                     justify-self: center;
                     display: block;
                     height: max-content;
-                    width: max-content;
+                    width: 100%;
+                    max-width: pxe(400);
                     position: relative;
 
 
 
                     img.eventposter {
                         height: max-content;
-                        width: pxe(500);
+                        width: 100%;
+                        max-width: inherit;
                         object-fit: cover;
                         object-position: center;
                         border-radius: pxe(18.16);
@@ -203,6 +282,7 @@
                 div.event-contact {
                     margin: pxe(24) 0;
                     display: flex;
+                    width: 100%;
                     flex-direction: column;
                     align-items: center;
                     
@@ -218,8 +298,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
-                
-                        min-width: pxe(450);
+                        width: 100%;
                 
                         background: rgba(255, 255, 255, 0.18);
                         backdrop-filter: blur(pxe(41.5127));
@@ -279,83 +358,6 @@
                 }
 
             
-                div.event-info-bg {
-                    margin: pxe(36) 0 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-            
-                    min-width: pxe(450);
-                    
-
-                    background: rgba(255, 255, 255, 0.18);
-                    backdrop-filter: blur(pxe(41.5127));
-            
-                    border-radius: pxe(18.1618);
-                    padding: pxe(16);
-                    position: relative;
-                    overflow: hidden;
-
-
-            
-                    div.event-info-item {
-                        display: flex;
-                        width: 100%;
-                        justify-content: space-between;
-                        padding-bottom: pxe(8);
-                        border-bottom: pxe(2) solid $white;
-                        margin: pxe(14) 0;
-                        text-align: end;
-                        color: $white;
-            
-                        span {
-                            display: inline-block;
-                            padding: 0 0 0 pxe(16);
-                            font-size: pxe(16);
-                            font-weight: 400;
-                            color: $white;
-                            text-align: end;
-                        }
-
-                        div {
-                            display: flex;
-                            color: $white;
-                            flex-direction: column;
-                            
-                            text-align: end;
-                        }
-
-            
-                        span.h-span {
-                            font-weight: 700;
-                            padding: 0 pxe(16) 0 0;
-                            text-align: end;
-                        }
-                    }
-
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: -50%;
-                        bottom: 0;
-                        right: 0;
-                        border-radius: pxe(18.16);
-                        background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
-                        display: block;
-                        height: 200%;
-                        width: pxe(100);
-                
-                
-                
-                        animation-name: register-glowbg;
-                        animation-duration: 6s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                
-                    }
-                }   
             }
         
         }
@@ -418,15 +420,15 @@
                 flex-direction: column;
                 color: $white;
                 width: 100%;
-        
+                padding-top: pxe(16);
         
         
                 p.eventDescription {
                     font-size: pxe(16);
                     font-weight: 400;
                     text-align: start;
-                    margin-top: pxe(24);
-                    padding: pxe(16);
+                    margin-bottom: pxe(16);
+                    // padding: pxe(16);
                 }
         
         
@@ -434,6 +436,82 @@
     
                 
             
+            }
+
+
+            div {
+                
+                div.event-info-bg {
+                    margin: pxe(24) 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    order: 1;
+
+                    width: 100%;
+            
+                    background: rgba(255, 255, 255, 0.18);
+                    backdrop-filter: blur(pxe(41.5127));
+            
+                    border-radius: pxe(18.1618);
+                    padding: pxe(10);
+                    position: relative;
+                    overflow: hidden;
+    
+    
+            
+                    div.event-info-item {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        padding-bottom: pxe(8);
+                        border-bottom: pxe(2) solid $white;
+                        margin: pxe(14) 0;
+                        text-align: end;
+            
+                        span {
+                            font-size: pxe(16);
+                            font-weight: 400;
+                            color: $white;
+                        }
+            
+                        div {
+                            display: flex;
+                            color: $white;
+                            flex-direction: column;
+                            text-align: end;
+                        }
+
+
+                        span.h-span {
+                            font-weight: 700;
+                        }
+                    }
+    
+    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -50%;
+                        bottom: 0;
+                        right: 0;
+                        border-radius: pxe(18.16);
+                        background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
+                        display: block;
+                        height: 200%;
+                        width: pxe(100);
+                
+                
+                
+                        animation-name: register-glowbg;
+                        animation-duration: 6s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                
+                    }
+                }
+    
             }
         
             
@@ -444,7 +522,6 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                margin-top: pxe(32);
     
                 div.img-bg {
                     order: 1;
@@ -495,7 +572,8 @@
                     display: flex;
                     flex-direction: column;
                     width: 100%;
-                    order: 2;
+                    order: 4;
+                    margin-top: pxe(16);
                     
                     
                     h2 {
@@ -580,6 +658,7 @@
                     display: flex;
                     width: 100%;
                     height: max-content;
+                    order: 2;
 
                     button.register {
                         width: 90%;
@@ -653,78 +732,11 @@
     
                 }  
                 
+                
+                
                 div.event-info-bg {
-                    margin: pxe(24) 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    order: 1;
-
-                    width: 100%;
-            
-                    background: rgba(255, 255, 255, 0.18);
-                    backdrop-filter: blur(pxe(41.5127));
-            
-                    border-radius: pxe(18.1618);
-                    padding: pxe(10);
-                    position: relative;
-                    overflow: hidden;
-    
-    
-            
-                    div.event-info-item {
-                        display: flex;
-                        width: 100%;
-                        justify-content: space-between;
-                        padding-bottom: pxe(8);
-                        border-bottom: pxe(2) solid $white;
-                        margin: pxe(14) 0;
-                        text-align: end;
-            
-                        span {
-                            font-size: pxe(16);
-                            font-weight: 400;
-                            color: $white;
-                        }
-            
-                        div {
-                            display: flex;
-                            color: $white;
-                            flex-direction: column;
-                            text-align: end;
-                        }
-
-
-                        span.h-span {
-                            font-weight: 700;
-                        }
-                    }
-    
-    
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: -50%;
-                        bottom: 0;
-                        right: 0;
-                        border-radius: pxe(18.16);
-                        background-image: linear-gradient(to right, transparent, #ffffff08, transparent);
-                        display: block;
-                        height: 200%;
-                        width: pxe(100);
-                
-                
-                
-                        animation-name: register-glowbg;
-                        animation-duration: 6s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                
-                    }
+                    order: 3;
                 }
-    
-                
             }
         
         }

@@ -112,11 +112,12 @@ var nontechEventsListData = [
             }
         ],
         eventDescription: [
-        `Round 1: 
-                Solve 25 logical questions.`,
-        `Round 2: 
-                Solve puzzles to find the next set of clues in a room and using those clues find the connection.
-        `],
+        `Are you interested in finding the hidden clues by solving puzzles? Someone who loves to solve logical reasoning questions?
+
+        `,`Then this event Connections is the perfect one for you! Pair up as a team of two and participate on February 3rd.
+        
+        `,`Grab prizes worth 1.3K!`
+        ],
         prize: {
             winner: 750,
             runner: 500,
@@ -153,7 +154,14 @@ var nontechEventsListData = [
             }
         ],
         eventDescription: [
-        `A total of 9 places have to be found. Initially they'll be given a starting place. It won't be same for all. It would be in a circular fashion. At the spot there'll be a QR code which they have to scan for the next spot's clue. But this QR code is password protected that is the code from previous clue will be used to ensure that places are visited in correct order. After finding each spot, a screenshot of the code in clue should be sent to the organisers number.` 
+        `"No thief, however skillful, can rob one of knowledge, and that is why knowledge is the best and safest treasure to acquire."
+
+        `,`Cracking mysteries, solving puzzles and thinking out of the box...does this sound like your thing?
+        
+        `,`Then grab a team of 3 or 4, and join with us on February 3rd for a mind-boggling TREASURE HUNT!!🔎🗺️🧭
+        
+        `,`Win exciting cash prizes worth 1.3k!!🔥
+        `,`Aarambikalangala😎`
         ],
         prize: {
             winner: 750,
@@ -245,8 +253,7 @@ var eventListData= [
                 null,`Then, i++ have the perfect event for you. Come and participate as a lone wolf coder in OSPC on the 3rd of Feb. The ones to unleash the 2 rounds of technical aptitude and competitive coding would be the bearer of a total cash prize of Rs. 6000 for both winners and runners and an internship offer from our title sponsor Kuriyam.`,
                 
                 
-                null,`Round 1: Consists of 25 Multiple Choice Questions (including 6 tie-breaker questions) Questions will be provided from topics such as OOPS, DBMS, Code Debugging, Finding the Output, Operating Systems, Networks. Participants should answer the questions within the stipulated time. (in case of equal score and equal tie-breaker questions answered, time of submission will be considered for selection).`,
-                null,`Round 2: Consists of 3 coding questions will be provided. Each of the questions will be of Easy, Intermediate and Hard difficulty level. Students can solve the coding questions using any programming language.`],
+            ],
             prize: {
                 winner: 4000,
                 runner: 2000,
@@ -287,12 +294,7 @@ var eventListData= [
             ],
             eventDescription: [
            `Won't it be thrilling to survive in the game by writing codes? This time ISTA and CSAU come together in i++ and invites you to compete among the fella coders for the attractive rewards in bizarre and fun filled coding rounds. Do you think you could survive till the end and take away those rewards by overcoming arduous obstacles? Then wear those green tracksuits and join us February 3rd in Squid Game. Ofcourse we warn the stakes are deadly`,
-            null,`Round 1: Participants can register and enter the room where a gamemaster will randomly say the word “statue” and attempts to make them laugh for a short time if someone moves/laughs they will be given a one minute time out. Questions will be normal coding questions with debug the code (25 QNS).
-            `,null,`Round 2: `,
-            ,`TASK 1: Candy Carving (Participants will have to choose a number which will have 4 languages (C C++ Python Java). They will be given a set of 10 questions and 25 minutes time, the first 10 to solve all the questions in their chosen language will be selected. If time runs out before filling 10 then we will just select the rest from the leaderboard.)`
-            ,null,`TASK 2: Tug of War (Participants will be divided into two teams 5v5. Each side will be given a set of 10 coding questions the team that solves first wins and the other team is eliminated. Team co-ordination is left up to the members.)`
-            ,null,`TASK 3: Pebble Game (Remaining 5 Participants are ordered by the rank of their mcqs say 1 2 3 4 5. Since 1 has aced the mcq 1 can go to finals directly and 2 vs 3 and 4 vs 5 is conducted where only one easy question with an edge testcase is given and whoever solves first is chosen and the other is eliminated.)`
-            ,null,`TASK 4: The Squid Game (With the last 3 players they are given a single question and a time of 10 minutes. Whoever passes the most test cases with a decent time complexity wins the game. ( Time of completion is taken for choosing the winning places ))`
+            null,
             ],
             prize: {
                 winner: 2000,
@@ -335,8 +337,6 @@ var eventListData= [
             eventDescription: [
             `The world has changed and so did many others things. Who knows what might happen in future? We might end up finding questions for answers instead of the other way round. Ahh, isn't that coool, but it's not as easy as it sounds. Don't agree with us? Prove us wrong by participating in the Code Decode event on February 3rd.
 
-            `,null,`Round 1: Consists of 5 questions for which students have to write the pseudocode or C++/C/Java/Python code of the logic. 
-            `,null,`Round 2: Consists of 5 questions for which .exe file will be provided. Students can execute the file and enter the inputs and get the outputs, using which they have to code the logic in any programming language.
             `],
             prize: {
                 winner: 2000,
@@ -380,9 +380,7 @@ var eventListData= [
             `Are you an expert in creating visually appealing and user-friendly interfaces? Then hop in. i++ brings yet another thrilling App/Web Development competition to put your abilities to the test as you build and develop innovative web projects. With prizes for the top contestants and the opportunity for internship at Kuriyam, this is your chance to shine and advance your career. So folks, get ready to unleash your creativity and take your UI/UX skills to the next level.
             `,null,
             `Pre-requisites: Students must bring their own laptops, with the necessary platform setup with which they are comfortable. (Android Studio, React-Native, React, Angular). Once the task has been given, the student is expected to start working on it. Time will not be given separately for setting up their framework.`
-            ,null,`Round 1: Student can choose from either a Web Development or App Development tasks. In either case, in the first round, the student has to design the required UI which will be provided to them in the form of an image sent through mail. Student can use any platform to develop the required UI (FrontEnd). Various UI requirements such as forms, navigation panels, display alignment, menus etc. will be provided which should be designed by the student.
-            `,null,`Round 2: Student must continue working on the UI they developed in Round 1. Student will be given the required functionalities of a full fledged application that should be developed in continuation to the UI they developed in Round 1.Tasks such as Backend design, Connecting the Frontend with Backend, Demonstration(Phone/Emulator for Android App and Localhost deployment for WebApp) should be performed.
-            `],
+            ],
             prize: {
                 winner: 4000,
                 runner: 2000,
@@ -476,9 +474,7 @@ var eventListData= [
             ],
             eventDescription: [
                 `"Select EVENTS from i++ where name="BREAK THE QUERY;" Yes!! this event is all about SQL queries....Showcase your knowledge on SQL and DBMS in this event and stand a chance to win cash prizes worth 3K!`
-                ,null,`Round 1: Consists of 30 MCQ questions related to SQL.
-                `,null,`Round 2: Participants will be given a set of questions and will be required to write SQL queries to find the answers. The event will test their knowledge of Table creation, cursors, PL/SQL and Triggers and SQL related questions.
-            `],
+            ],
             
             prize: {
                 winner: 2000,
