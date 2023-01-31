@@ -11,8 +11,9 @@ footer {
     align-items: center;
     width: 100%;
     background-color: $black;
-    padding: pxe(16);
-    height: pxe(339.2);
+    padding: pxe(16) 0 0;
+    height: max-content;
+
 
 
     div.footer-div {
@@ -128,7 +129,7 @@ footer {
 
 
     span.copyright {
-        margin: pxe(48) 0 pxe(24);
+        margin: pxe(8) 0;
         font-size: pxe(16);
         color: $white;
     }
@@ -156,7 +157,7 @@ footer {
         align-items: center;
         width: 100%;
         background-color: $black;
-        padding: pxe(16) pxe(32);
+        padding: pxe(16) pxe(32) 0;
         height: max-content;
     
     
@@ -279,7 +280,7 @@ footer {
     
     
         span.copyright {
-            margin: pxe(48) 0 pxe(24);
+            margin: pxe(8) 0;
             font-size: pxe(16);
             color: $white;
         }
