@@ -34,6 +34,48 @@ div.welcome-div {
             // width: 100%;
             // margin-right: auto;
             padding-right: pxe(36);
+
+
+            div.sponsor-div {
+                width: 100%;    
+                height: max-content;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: pxe(8);
+                justify-content: space-evenly;
+                
+            
+                background: rgba(255, 255, 255, 0.18);
+                backdrop-filter: blur(pxe(41.5127));
+        
+                border-radius: pxe(18.1618);
+
+
+                div.spnsr-item {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: max-content;
+                    padding: pxe(16) 0;
+
+                    img.spnsr-img {
+                        height: pxe(160);
+                        width: 100%;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+
+                    span.spnsr-type {
+                        font-size: pxe(24);
+                        font-weight: 400;
+                    }
+                }
+
+            }
+
+
+
+
     
             h1 {
                 font-size: pxe(48);

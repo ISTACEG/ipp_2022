@@ -520,12 +520,12 @@ var sponsorsList = [
         sponsorLogo: "./posters/KBX_Logo.png",
         type: "Workshop Partner"
     },
-    {
-        sponsorName: "Anna University Incubation Center",
-        // sponsorLogo: "https://plus.unsplash.com/premium_photo-1667857391858-a40fc91136e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-        sponsorLogo: "./posters/2.png",
-        type: "Event Sponsor"
-    },
+    // {
+    //     sponsorName: "Anna University Incubation Center",
+    //     // sponsorLogo: "https://plus.unsplash.com/premium_photo-1667857391858-a40fc91136e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+    //     sponsorLogo: "./posters/2.png",
+    //     type: "Event Sponsor"
+    // },
     
 ]
 
