@@ -279,7 +279,7 @@ var eventListData= [
         {
             eventName: "Escape Room",
             eventType: "1",
-            eventImgUrl: "./posters/escape_room.jpg",
+            eventImgUrl: "./posters/escaperoom.jpeg",
             date: Date.parse("03 Feb 2023"),
             location: "IT Department Laboratory",
             rounds: [
