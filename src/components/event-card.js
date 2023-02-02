@@ -26,6 +26,17 @@ function EventCard(props) {
         <div onClick={eventCardClick} className="event-card">
             <img src={props.imgUrl} alt="" />
 
+
+            {
+                
+                (props.isover) &&
+                <div className="event-over">
+                    Over
+                </div>
+            
+            }
+
+
             <div className="info-grid">
 
                 <h2 className='event-heading'>{props.name}</h2>

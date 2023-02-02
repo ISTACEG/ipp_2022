@@ -46,6 +46,36 @@
                 position: relative;
                 cursor: pointer;
                 z-index: 3;
+                overflow: hidden;
+
+                div.event-over {
+                    position: absolute;
+                    display: flex;
+                    background-color: rgba(red, 0.75);
+                    height: pxe(40);
+                    // width: ;
+                    padding:  0 pxe(100);
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    font-size: pxe(18);
+                    font-weight: 700;
+
+                    transform: rotate(45deg);
+                    right: pxe(-80);
+                    top: pxe(30);
+                    z-index: 5;
+
+                    
+
+
+                }
+
+
+
+
+
+
 
 
                 div.edge-1 {
@@ -319,6 +349,27 @@
                 position: relative;
                 cursor: pointer;
                 z-index: 3;
+                overflow: hidden;
+
+                div.event-over {
+                    position: absolute;
+                    display: flex;
+                    background-color: rgba(red, 0.75);
+                    height: pxe(40);
+                    padding:  0 pxe(100);
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    font-size: pxe(18);
+                    font-weight: 700;
+
+                    transform: rotate(45deg);
+                    right: pxe(-80);
+                    top: pxe(30);
+                    z-index: 5;
+
+                }
+
 
 
                 div.edge-1 {

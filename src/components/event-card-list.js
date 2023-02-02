@@ -28,8 +28,20 @@ function EventCardList() {
             <div className="workshop-container" onClick={workshopCardClick}>
                 {workshopData.map((item, index) => (
 
+                    
+
                     <div className="workshop-card">
                         <img src={item.eventImgUrl} alt="" />
+
+                        {
+                            
+                            ((new Date(item.date).toLocaleString("en-US", {dateStyle: 'short'}) < new Date().toLocaleString("en-US", {dateStyle: 'short'}))) &&
+
+                            <div className="event-over">
+                                Over
+                            </div>
+                        
+                        }
 
                         <div className="info-grid">
 
@@ -64,6 +76,16 @@ function EventCardList() {
                         <div className="workshop-card">
                             <img src={item.eventImgUrl} alt="" />
 
+                            {
+                            
+                                ((new Date(item.date).toLocaleString("en-US", {dateStyle: 'short'}) < new Date().toLocaleString("en-US", {dateStyle: 'short'}))) &&
+
+                                <div className="event-over">
+                                    Over
+                                </div>
+                            
+                            }
+
                             <div className="info-grid">
 
                                 <h2 className='event-heading'>{item.eventName}</h2>
@@ -90,17 +112,33 @@ function EventCardList() {
 
             <div className="Event-Card-List">
                 
-                {eventListData.map((eventItem, index) => (
-                    <EventCard eventId={index} imgUrl={eventItem.eventImgUrl} name={eventItem.eventName} type={eventItem.eventType} time={eventItem.time} location={eventItem.location} prize={eventItem.prize} rounds={eventItem.noRound} />
-                ))}
+                {eventListData.map((eventItem, index) => {
+                    var isOver = false;
+                        
+                    if ((new Date(eventItem.date).toLocaleString("en-US", {dateStyle: 'short'}) < new Date().toLocaleString("en-US", {dateStyle: 'short'}))) {
+                        isOver = true
+                    }                
+                
+                    return(
+                        <EventCard eventId={index} imgUrl={eventItem.eventImgUrl} name={eventItem.eventName} type={eventItem.eventType} time={eventItem.time} location={eventItem.location} prize={eventItem.prize} rounds={eventItem.noRound}  isover={isOver}/>
+                    )
+                })}
 
             </div>
 
             <div className="Event-Card-List">
                 
-                {nontechEventsListData.map((eventItem, index) => (
-                    <EventCard eventId={index} imgUrl={eventItem.eventImgUrl} name={eventItem.eventName} type={eventItem.eventType} time={eventItem.time} location={eventItem.location} prize={eventItem.prize} rounds={eventItem.noRound} />
-                ))}
+                {nontechEventsListData.map((eventItem, index) => {
+                    var isOver = false;
+                      
+                    if ((new Date(eventItem.date).toLocaleString("en-US", {dateStyle: 'short'}) < new Date().toLocaleString("en-US", {dateStyle: 'short'}))) {
+                        isOver = true
+                    }
+
+                    return (    
+                        <EventCard eventId={index} imgUrl={eventItem.eventImgUrl} name={eventItem.eventName} type={eventItem.eventType} time={eventItem.time} location={eventItem.location} prize={eventItem.prize} rounds={eventItem.noRound} isover={isOver} />
+                    )
+                })}
 
             </div>
 

@@ -100,7 +100,7 @@ var nontechEventsListData = [
         eventType: "2",
         eventImgUrl: "./posters/connections_poster.jpg",
         date: Date.parse("03 Feb 2023"),
-        location: "IT Department Ground floor room",
+        location: "IT Dept - Ada Lovelace Audi",
         rounds: [
             {
                 time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -236,7 +236,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/ospc_poster.jpg",
             date: Date.parse("03 Feb 2023"),
-            location: "IT Department Lab",
+            location: "IT Department 2nd Floor Lab",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -281,7 +281,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/escaperoom.jpeg",
             date: Date.parse("03 Feb 2023"),
-            location: "IT Department Laboratory",
+            location: "IT Department 3rd Floor Lab",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -323,7 +323,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/code_decode_poster.jpeg",
             date: Date.parse("03 Feb 2023"),
-            location: "IT Department Laboratory",
+            location: "IT Department 3rd Floor Lab",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -365,7 +365,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/Appdev_poster.png",
             date: Date.parse("03 Feb 2023"),
-            location: "IT Department Laboratory",
+            location: "IT Department 1st Floor Lab",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
@@ -411,7 +411,7 @@ var eventListData= [
             location: "IT Department Conference Hall",
             rounds: [
                 {
-                    time: Date.parse("03 Feb 2023 09:00:00 AM"),
+                    time: Date.parse("03 Feb 2023 10:00:00 AM"),
                     duration: null
                 },
             ],
@@ -461,7 +461,7 @@ var eventListData= [
             eventType: "1",
             eventImgUrl: "./posters/BreakTheQuery.png",
             date: Date.parse("03 Feb 2023"),
-            location: "IT Department Laboratory",
+            location: "IT Department 2nd Floor Lab",
             rounds: [
                 {
                     time: Date.parse("03 Feb 2023 09:00:00 AM"),
