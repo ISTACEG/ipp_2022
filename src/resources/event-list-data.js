@@ -406,7 +406,7 @@ var eventListData= [
         {
             eventName: "Shark Tank",
             eventType: "1",
-            eventImgUrl: "./posters/sharktank_poster.jpeg",
+            eventImgUrl: "./posters/sharktank.jpeg",
             date: Date.parse("03 Feb 2023"),
             location: "IT Department Conference Hall",
             rounds: [
@@ -437,8 +437,8 @@ var eventListData= [
                 winner: 3000,
                 runner: 1500,
             },
-            benefits: "Free Incubation worth of 10k",
-            member: "1",
+            benefits: null,
+            member: "3",
             organiser: [
                 {
                     name: "Akashram J",
